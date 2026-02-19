@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <title>그린벨 동물의료센터</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <section class="intro" id="intro-top">
+
+    <div class="intro-ci">
+      <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+      <a href="#intro-top"><img src="images/CI.png" alt="그린벨 동물의료센터 CI"></a>
+    </div>
+
+    <nav class="intro-menu">
+      <ul class="main-menu">
+        <li class="has-sub">
+          <a href="#intro-top">병원소개</a>
+          <ul class="sub-menu">
+            <li><a href="#doctors-section">의료진 소개</a></li>
+            <li><a href="#tour-section">병원 둘러보기</a></li>
+            <li><a href="#history-section">History</a></li>
+            <li><a href="#hours-section">진료시간</a></li>
+            <li><a href="#location-section">오시는 길</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="a.html">내과센터</a>
+          <ul class="sub-menu">
+            <li><a href="a.html">심장·호흡기</a></li>
+            <li><a href="a.html">신장·비뇨기</a></li>
+            <li><a href="a.html">소화기</a></li>
+            <li><a href="a.html">내분비</a></li>
+            <li><a href="a.html">종양</a></li>
+            <li><a href="a.html">피부</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="b.html">외과센터</a>
+          <ul class="sub-menu">
+            <li><a href="b.html">정형외과</a></li>
+            <li><a href="b.html">치과</a></li>
+            <li><a href="b.html">일반·종양외과</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="c.html">고양이전문센터</a>
+          <ul class="sub-menu">
+            <li><a href="c.html">진료실</a></li>
+            <li><a href="c.html">대기실</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="d.html">건강검진센터</a>
+        </li>
+        <li class="has-sub">
+          <a href="#">그린벨 소식</a>
+          <ul class="sub-menu">
+            <li><a href="https://blog.naver.com/greenbellanimal" target="_blank">블로그</a></li>
+            <li><a href="https://www.instagram.com/greenbellanimal/" target="_blank">인스타그램</a></li>
+            <li><a href="https://www.facebook.com/share/1AS8kG6rg1/?mibextid=wwXIfr" target="_blank">페이스북</a></li>
+            <li><a href="https://www.youtube.com/@greenbell_animal" target="_blank">유튜브</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="intro-greeting">
+      <p class="greeting-main">그린벨동물의료센터는</p>
+
+      <!-- PC용 인사말 -->
+      <p class="greeting-sub pc-only">
+        작은 동물병원으로 시작해 진료의 기준을 지켜온 선택으로 성장해 왔습니다.<br>
+        우리는 진료를 가볍게 여기지 않습니다.<br>
+        정확한 진단을 바탕으로, 각 환자에게 지금 가장 필요한 치료를 고민합니다.<br><br>
+        그린벨동물의료센터는 오늘도 2차병원 출신 수의사들의 협진과<br>
+        전문 스태프들의 숙련된 간호와 처치를 바탕으로<br>
+        치료의 방향을 신중하게 이어가고 있습니다.<br><br>
+        앞으로도 그린벨동물의료센터는 안주하지 않고
+        더 나은 치료를 위해 계속 나아가겠습니다.
+      </p>
+
+      <!-- 모바일용 인사말 -->
+      <p class="greeting-sub mobile-only">
+        작은 동물병원으로 시작해 진료의 기준을 <br>
+        지켜온 선택으로 성장해 왔습니다.<br><br>
+
+        우리는 진료를 가볍게 여기지 않습니다.<br>
+        정확한 진단을 바탕으로, 각 환자에게 <br>
+        지금 가장 필요한 치료를 고민합니다.<br><br>
+
+        그린벨동물의료센터는 오늘도<br>
+        2차병원 출신 수의사들의 협진과<br>
+        전문 스태프들의 숙련된 간호와 처치를 <br>
+        바탕으로 치료의 방향을 <br>
+        신중하게 이어가고 있습니다.<br><br>
+
+        앞으로도 그린벨동물의료센터는<br>
+        안주하지 않고,<br>
+        더 나은 치료를 위해 계속 나아가겠습니다.
+      </p>
+    </div>
+
+    <video class="intro-video" autoplay muted loop playsinline>
+      <source src="images/Greenbelltal_02.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <section class="doctors-section" id="doctors-section">
+    <div class="container">
+      <div class="doctor-item">
+        <div class="doctor-photo">
+          <img src="images/profile001.png" alt="성지세 대표원장">
+        </div>
+        <div class="doctor-info">
+          <div class="info-header">
+            <span class="role">대표원장</span>
+            <h3 class="name">성지세</h3>
+          </div>
+          <div class="info-body">
+            <h4>학력 및 경력</h4>
+            <ul>
+              <li>충남대학교 수의과대학 학사 / 내과 석사 수료 </li>
+              <li>현) 그린벨동물의료센터 충북혁신 본점 대표원장 </li>
+              <li>현) 한국고양이수의사회(KSFM) 정회원</li>
+              <li>전) Pfizer Animal Health Korea / KRA 동물병원 근무 </li>
+              <li>전) KRA 동물병원 근무</li>
+              <li>전) A&D 동물의료센터 근무</li>
+            </ul>
+            <h4>주요 활동</h4>
+            <ul>
+              <li>안재상 안과학 세미나 수료</li>
+              <li>김성수 호르몬 세미나 수료</li>
+              <li>서울수의학회 세미나 수료</li>
+              <li>조규만 수의정형 수술 아카데미 수료</li>
+              <li>수의골관절학회 골절처치 Course 수료</li>
+              <li>수의정형외과아카데미 Easy Vet O.S Masters (CTWO, TPLO) Course 수료</li>
+              <li>수의치과 베이직·스탠다드 세미나 수료</li>
+              <li>수의 심장초음파 세미나 수료</li>
+              <li>KSFM 고양이 심장 세미나 수료</li>
+              <li>2023년 한국수의심장협회 & 한국고양이수의사회 공동 심화학회 수료</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-item">
+        <div class="doctor-photo">
+          <img src="images/profile002.png" alt="신동헌 내과과장">
+        </div>
+        <div class="doctor-info">
+          <div class="info-header">
+            <span class="role">내과 과장</span>
+            <h3 class="name">신동헌</h3>
+          </div>
+          <div class="info-body">
+            <h4>학력 및 경력</h4>
+            <ul>
+              <li>전남대학교 수의학과 졸업</li>
+              <li>충북대학교 수의임상학 내과 석사 졸업</li>
+              <li>현) 그린벨동물의료센터 내과 과장</li>
+              <li>현) 한국고양이수의사회(KSFM) 정회원</li>
+              <li>전) 전북도청 수의직 공무원</li>
+              <li>전) 검역본부 수의직 공무원</li>
+              <li>전) 나음동물메디컬센터 근무</li>
+              <li>전) 충북대학교 동물병원 내과 수련의</li>
+            </ul>
+            <h4>학술 및 연구</h4>
+            <ul>
+              <li>한국임상수의학회 학술 발표 Successful Management of Incompletely Resected Transitional Cell Carcinoma with
+                Sorafenib Tosylate in a Dog</li>
+              <li>Shin D, Kim C, Chae Y, Yun T, Kang BT, Park KM, Kim H. Successful Management of Incompletely Resected
+                Transitional Cell Carcinoma with Sorafenib Tosylate in a Dog. J Am Anim Hosp Assoc. 2024 Nov
+                1;60(6):275-279. 제1저자</li>
+              <li>• Shin D, Chae Y, Yun T, Kang BT, Kim H. Change in insulin-like growth factor type 1 concentration
+                after radioactive iodine treatment in cats with hyperthyroidism. J Feline Med Surg. 2025
+                Dec;27(12):1098612X251395870. 제 1저자</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-item">
+        <div class="doctor-photo">
+          <img src="images/profile003.png" alt="신서은 외과과장">
+        </div>
+        <div class="doctor-info">
+          <div class="info-header">
+            <span class="role">외과 과장</span>
+            <h3 class="name">신서은</h3>
+          </div>
+          <div class="info-body">
+            <h4>학력 및 경력</h4>
+            <ul>
+              <li>충북대학교 수의학과 졸업 </li>
+              <li>충북대학교 해부학실험실 연구원</li>
+              <li>현) 그린벨동물의료센터 외과 과장</li>
+              <li>현) 한국고양이수의사회(KSFM) 정회원</li>
+              <li>전) 청주 24시 이음동물병원 진료수의사</li>
+              <li>전) 청주 24시 이음동물병원 외과 과장</li>
+            </ul>
+            <h4>교육 및 연수</h4>
+            <ul>
+              <li>AOVET Course: Fracture Management 수료 </li>
+              <li>7th ARIX VET TPLO Hands-on Course 수료 </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-item">
+        <div class="doctor-photo">
+          <img src="images/profile004.png" alt="정세민 진료수의사">
+        </div>
+        <div class="doctor-info">
+          <div class="info-header">
+            <span class="role">진료 수의사</span>
+            <h3 class="name">정세민</h3>
+          </div>
+          <div class="info-body">
+            <h4>학력 및 경력</h4>
+            <ul>
+              <li>전북대학교 수의과대학 졸업 </li>
+              <li>전북대학교 병리학실험실 연구원</li>
+              <li>현) 그린벨동물의료센터 진료수의사</li>
+              <li>현) 한국고양이수의사회(KSFM) 정회원</li>
+              <li>전) 안성웰니스동물병원 진료수의사</li>
+            </ul>
+            <h4>교육 및 연수</h4>
+            <ul>
+              <li>Fear-Free Certification Program 수료</li>
+              <li>서울 수의 컨퍼런스(2024)</li>
+              <li>김성수 Heart Signal One-day 세미나 수료</li>
+              <li>한남심장내과동물병원 내과 세미나 수료</li>
+              <li>본동물의료센터 영상 세미나 수료</li>
+              <li>최치봉 박사 복부초음파 세미나 수료</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-item">
+        <div class="doctor-photo">
+          <img src="images/profile005.png" alt="최수영 진료수의사">
+        </div>
+        <div class="doctor-info">
+          <div class="info-header">
+            <span class="role">진료 수의사</span>
+            <h3 class="name">최수영</h3>
+          </div>
+          <div class="info-body">
+            <h4>학력 및 경력</h4>
+            <ul>
+              <li>충북대학교 수의학과 졸업</li>
+              <li>현) 그린벨동물의료센터 근무</li>
+              <li>현) 한국고양이수의사회(KSFM) 정회원</li>
+              <li>전) 충북 옥천군 공중방역수의사</li>
+            </ul>
+            <h4>교육 및 연수</h4>
+            <ul>
+              <li>대전 성심AH 임상실습 수료</li>
+              <li>최치봉 박사 초음파 실습 및 세미나 수료</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-item">
+        <div class="doctor-photo">
+          <img src="images/profile006.png" alt="이성재 진료수의사">
+        </div>
+        <div class="doctor-info">
+          <div class="info-header">
+            <span class="role">진료 수의사</span>
+            <h3 class="name">이성재</h3>
+          </div>
+          <div class="info-body">
+            <h4>학력 및 경력</h4>
+            <ul>
+              <li>경상대학교 수의과대학 졸업</li>
+              <li>현) 그린벨동물의료센터 진료수의사 </li>
+              <li>전) 충북대학교 동물병원 진료수의사</li>
+            </ul>
+            <h4>교육 및 연수</h4>
+            <ul>
+              <li>UC Davis 동물병원 신경/신경외과 익스턴십 수료</li>
+              <li>미국 수의내과학회 ACVIM 2024·2025 참가</li>
+              <li>FAVA 2024 학회 참여</li>
+            </ul>
+            <h4>학술 및 연구</h4>
+            <ul>
+              <li>Platelet-to-Lymphocyte Ratio as a Potential Biomarker in Dogs with Idiopathic Epilepsy, ACVIM 2025.
+              </li>
+              <li>Value of serum neurofilament light chain as a biomarker for canine spinal cord diseases, FAVA 2024.
+              </li>
+              <li>증례보고: Eosinophilic and Mixed-Cell Infiltration in Odontogenic Cutaneous Sinus Tracts of a Dog</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-item">
+        <div class="doctor-photo">
+          <img src="images/profile007.png" alt="양진영 진료원장">
+        </div>
+        <div class="doctor-info">
+          <div class="info-header">
+            <span class="role">진료원장</span>
+            <h3 class="name">양진영</h3>
+          </div>
+          <div class="info-body">
+            <h4>학력 및 경력</h4>
+            <ul>
+              <li>건국대학교 수의과대학 졸업</li>
+              <li>현) 그린벨동물의료센터 충북혁신점 진료수의사</li>
+              <li>현) 그린벨동물병원 진천점 진료원장</li>
+              <li>전) 광양동물메디컬센터 진료수의사</li>
+              <li>한국고양이수의사회 (ksfm) 정회원</li>
+              <li>힐스 수의영양학 앰버서더</li>
+            </ul>
+            <h4>교육 및 연수</h4>
+            <ul>
+              <li>KAHA 국제학회 참석</li>
+              <li>건국대 임상 로테이션 수료</li>
+              <li>수의 안과 세미나 수료</li>
+              <li>수의 임상치과학 세미나 수료</li>
+              <li>서울수의임상컨퍼런스 춘·추계 세미나 참석</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="staff-slider-container" style="margin-top: 100px; padding-bottom: 80px;">
+        <div class="swiper staff-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="staff-card">
+                <div class="staff-photo">
+                  <img src="images/profile008.png" alt="수의테크니션 원무과 박예리">
+                </div>
+                <div class="staff-info">
+                  <p class="staff-role">수의테크니션</p>
+                  <p class="staff-role">원무과</p>
+                  <p class="staff-name">박예리</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="staff-card">
+                <div class="staff-photo">
+                  <img src="images/profile009.png" alt="수의테크니션 원무과 정다유">
+                </div>
+                <div class="staff-info">
+                  <p class="staff-role">수의테크니션</p>
+                  <p class="staff-role">원무과</p>
+                  <h3 class="staff-name">정다유</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="staff-card">
+                <div class="staff-photo">
+                  <img src="images/profile010.png" alt="수의테크니션 교육실장 & 외과 파트장 임주혁">
+                </div>
+                <div class="staff-info">
+                  <p class="staff-role">수의테크니션</p>
+                  <p class="staff-role">교육실장 & 외과 파트장</p>
+                  <h3 class="staff-name">임주혁</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="staff-card">
+                <div class="staff-photo">
+                  <img src="images/profile011.png" alt="수의테크니션 강아지파트장 정다슬">
+                </div>
+                <div class="staff-info">
+                  <p class="staff-role">수의테크니션</p>
+                  <p class="staff-role">강아지파트장</p>
+                  <h3 class="staff-name">정다슬</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="staff-card">
+                <div class="staff-photo">
+                  <img src="images/profile012.png" alt="수의테크니션 강아지파트장 손은영">
+                </div>
+                <div class="staff-info">
+                  <p class="staff-role">수의테크니션</p>
+                  <p class="staff-role">강아지파트장</p>
+                  <h3 class="staff-name">손은영</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="staff-card">
+                <div class="staff-photo">
+                  <img src="images/profile013.png" alt="수의테크니션 고양이파트장 김미소">
+                </div>
+                <div class="staff-info">
+                  <p class="staff-role">수의테크니션</p>
+                  <p class="staff-role">고양이파트장</p>
+                  <h3 class="staff-name">김미소</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="staff-card">
+                <div class="staff-photo">
+                  <img src="images/profile014.png" alt="수의테크니션 원무과 정다유">
+                </div>
+                <div class="staff-info">
+                  <p class="staff-role">수의테크니션</p>
+                  <p class="staff-role">고양이파트장</p>
+                  <h3 class="staff-name">이혜지</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <section id="tour-section" style="padding:120px 20px; background:#f7f7f7;">
+    <h2 style="text-align:center;">병원 둘러보기</h2>
+    <p style="text-align:center; margin-top:20px;">
+      여기는 병원 둘러보기입니다.
+    </p>
+
+    <!-- 📸 나중에 사진/슬라이드 넣을 공간 -->
+    <div style="max-width:1200px; margin:80px auto 0; background:#f7f7f7;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px;">
+        <img src="images/branch001.webp" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="images/branch002.webp" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="images/branch003.webp" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="images/branch006.webp" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="images/branch010.webp" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="images/branch013.webp" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="images/branch015.webp" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="images/branch016.webp" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+      </div>
+    </div>
+  </section>
+
+  <section id="history-section" style="padding:120px 20px; background:#ffffff;">
+    <h2 style="text-align:center;">History</h2>
+    <p style="text-align:center; margin-top:20px;">
+      여기는 히스토리입니다.
+    </p>
+
+    <!-- ✏️ 연혁 수정용 공간 -->
+    <div style="max-width:900px; margin:80px auto; min-height:300px;">
+      <!-- 연혁 텍스트 들어갈 자리 -->
+    </div>
+  </section>
+
+  <section id="hours-section" style="padding:120px 20px; background:#f7f7f7;">
+    <h2 style="text-align:center; font-size:2rem; margin-bottom:40px;">진료시간</h2>
+
+    <div
+      style="max-width:800px; margin:0 auto; background:#fff; padding:40px; border-radius:12px; box-shadow:0 5px 20px rgba(0,0,0,0.05);">
+      <div style="display:flex; flex-direction:column; gap:20px; align-items:center; text-align:center;">
+
+        <!-- Weekdays -->
+        <div style="width:100%; border-bottom:1px solid #eee; padding-bottom:20px;">
+          <span style="display:block; font-size:1.2rem; font-weight:700; color:#333; margin-bottom:5px;">평일</span>
+          <span style="font-size:1.5rem; font-weight:600; color:var(--primary-color);">AM 10:00 ~ PM 08:00</span>
+        </div>
+
+        <!-- Weekends -->
+        <div style="width:100%; border-bottom:1px solid #eee; padding-bottom:20px;">
+          <span style="display:block; font-size:1.2rem; font-weight:700; color:#333; margin-bottom:5px;">주말</span>
+          <span style="font-size:1.5rem; font-weight:600; color:var(--primary-color);">AM 10:00 ~ PM 06:00</span>
+        </div>
+
+        <!-- Lunch Time -->
+        <div style="width:100%;">
+          <span style="display:block; font-size:1.1rem; font-weight:700; color:#555; margin-bottom:5px;">점심시간</span>
+          <span style="font-size:1.2rem; font-weight:500; color:#777;">PM 01:00 ~ PM 02:00</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="location-section" class="section-padding bg-light">
+    <div class="container">
+      <h2 class="section-main-title">오시는 길</h2>
+
+      <!-- Branch 1: Innovation City -->
+      <div class="location-branch"
+        style="margin-bottom: 80px; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+        <h3
+          style="font-size: 1.5rem; margin-bottom: 20px; color: #333; border-left: 4px solid var(--primary-color); padding-left: 15px;">
+          혁신도시점</h3>
+        <div class="map-container"
+          style="width: 100%; height: 400px; margin-bottom: 30px; border-radius: 8px; overflow: hidden; background:#eee;">
+          <iframe src="https://map.kakao.com/?q=충북%20음성군%20맹동면%20대하1길%204" width="100%" height="100%" style="border:0;"
+            loading="lazy"></iframe>
+        </div>
+        <div class="info-grid" style="display: grid; grid-template-columns: 100px 1fr; gap: 15px 20px;">
+          <div class="info-label" style="font-weight: 700; color: #333;">주소</div>
+          <div class="info-value" style="color: #555;">충북 음성군 맹동면 대하1길 4, 위너스타워 2층</div>
+
+          <div class="info-label" style="font-weight: 700; color: #333;">전화</div>
+          <div class="info-value" style="font-weight: 600; color: var(--primary-color);">043-882-7975</div>
+
+          <!-- Add transport info if applicable, keeping simple for now as requested -->
+        </div>
+      </div>
+
+      <!-- Branch 2: Jincheon -->
+      <div class="location-branch"
+        style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+        <h3
+          style="font-size: 1.5rem; margin-bottom: 20px; color: #333; border-left: 4px solid var(--primary-color); padding-left: 15px;">
+          진천점</h3>
+        <div class="map-container"
+          style="width: 100%; height: 400px; margin-bottom: 30px; border-radius: 8px; overflow: hidden; background:#eee;">
+          <iframe src="https://map.kakao.com/?q=충북%20진천군%20진천읍%20원덕로%20375" width="100%" height="100%" style="border:0;"
+            loading="lazy"></iframe>
+        </div>
+        <div class="info-grid" style="display: grid; grid-template-columns: 100px 1fr; gap: 15px 20px;">
+          <div class="info-label" style="font-weight: 700; color: #333;">주소</div>
+          <div class="info-value" style="color: #555;">충북 진천군 진천읍 원덕로 375, 1층</div>
+
+          <div class="info-label" style="font-weight: 700; color: #333;">전화</div>
+          <div class="info-value" style="font-weight: 600; color: var(--primary-color);">043-533-7975</div>
+        </div>
+      </div>
+
+      <!-- Footer Info (Copyright) -->
+      <div
+        style="margin-top: 80px; border-top: 1px solid #ddd; padding-top: 40px; text-align: center; color: #777; font-size: 0.9rem; line-height: 1.6;">
+        <p>사업자번호 : 210-38-94302 ｜ 대표자 : 성지세</p>
+        <p>TEL : 043-882-7975 ｜ E-mail : greenbellequine@naver.com</p>
+        <p class="copyright">COPYRIGHT © GREENBELL ANIMAL MEDICAL CENTER. ALL RIGHTS RESERVED.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="js/menu.js"></script>
+</body>
+
+</html>

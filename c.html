@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>고양이전문센터 - 그린벨 동물의료센터</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .intro-menu {
+            background-color: var(--header-bg-sticky) !important;
+            position: fixed !important;
+            top: 0 !important;
+            padding: 0 !important;
+            max-width: none !important;
+            width: 100% !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .intro-menu .main-menu {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px 0;
+        }
+
+        .intro-menu .main-menu>li>a {
+            font-size: 20px;
+            color: var(--header-text-sticky);
+            text-shadow: none;
+            font-weight: 600;
+        }
+
+        .subpage-content {
+            padding-top: 120px;
+            min-height: 80vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="intro-menu sticky">
+        <ul class="main-menu">
+            <li class="has-sub">
+                <a href="index.html#intro-top">병원소개</a>
+                <ul class="sub-menu">
+                    <li><a href="index.html#doctors-section">의료진 소개</a></li>
+                    <li><a href="index.html#tour-section">병원 둘러보기</a></li>
+                    <li><a href="index.html#history-section">History</a></li>
+                    <li><a href="index.html#hours-section">진료시간</a></li>
+                    <li><a href="index.html#location-section">오시는 길</a></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="a.html">내과센터</a>
+                <ul class="sub-menu">
+                    <li><a href="a.html">심장·호흡기</a></li>
+                    <li><a href="a.html">신장·비뇨기</a></li>
+                    <li><a href="a.html">소화기</a></li>
+                    <li><a href="a.html">내분비</a></li>
+                    <li><a href="a.html">종양</a></li>
+                    <li><a href="a.html">피부</a></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="b.html">외과센터</a>
+                <ul class="sub-menu">
+                    <li><a href="b.html">정형외과</a></li>
+                    <li><a href="b.html">치과</a></li>
+                    <li><a href="b.html">일반·종양외과</a></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="c.html">고양이전문센터</a>
+                <ul class="sub-menu">
+                    <li><a href="c.html">진료실</a></li>
+                    <li><a href="c.html">대기실</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="d.html">건강검진센터</a>
+            </li>
+            <li class="has-sub">
+                <a href="#">그린벨 소식</a>
+                <ul class="sub-menu">
+                    <li><a href="https://blog.naver.com/greenbellanimal" target="_blank">블로그</a></li>
+                    <li><a href="https://www.instagram.com/greenbellanimal/" target="_blank">인스타그램</a></li>
+                    <li><a href="https://www.facebook.com/share/1AS8kG6rg1/?mibextid=wwXIfr" target="_blank">페이스북</a>
+                    </li>
+                    <li><a href="https://www.youtube.com/@greenbell_animal" target="_blank">유튜브</a></li>
+                </ul>
+            </li>
+            <button class="menu-toggle" aria-label="메뉴 열기"
+                style="position:absolute; right: 20px; top: 15px; display: none;">☰</button>
+        </ul>
+    </nav>
+
+    <button class="menu-toggle" aria-label="메뉴 열기"
+        style="position: fixed; top: 15px; left: 20px; z-index: 2000; font-size: 24px; background:none; border:none; color: #fff;">☰</button>
+
+    <section class="subpage-content">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+            <h1 style="text-align: center; margin-bottom: 60px; font-size: 2.5rem; color: #333;">고양이전문센터</h1>
+
+            <div id="sect-1" class="sub-section" style="margin-bottom: 80px;">
+                <h2
+                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
+                    고양이 진료실</h2>
+                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
+                    <p style="font-size: 1.1rem; color: #555;">예민한 고양이들을 위해 소음을 최소화하고 페로몬 디퓨저(Feliway)를 설치하여 스트레스를 줄인 전용
+                        진료 공간입니다.</p>
+                </div>
+            </div>
+
+            <div id="sect-2" class="sub-section" style="margin-bottom: 80px;">
+                <h2
+                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
+                    고양이 대기실</h2>
+                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
+                    <p style="font-size: 1.1rem; color: #555;">강아지와 분리된 독립적인 대기 공간을 제공하여, 고양이 환자와 보호자가 편안하게 진료를 기다릴 수
+                        있습니다.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="location-section" style="padding:60px 20px; background:#111; color:#fff;">
+        <div style="max-width:1400px; margin:0 auto;">
+            <div
+                style="border-top:1px solid rgba(255,255,255,0.25); padding-top:40px; font-size:14px; line-height:1.8; opacity:0.8; text-align:center;">
+                <p>사업자번호 : 210-38-94302 ｜ 대표자 : 성지세</p>
+                <p>TEL : 043-882-7975 ｜ E-mail : greenbellequine@naver.com</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

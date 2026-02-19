@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>내과센터 - 그린벨 동물의료센터</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        /* Subpage Header Adjustment */
+        .intro-menu {
+            background-color: var(--header-bg-sticky) !important;
+            position: fixed !important;
+            top: 0 !important;
+            padding: 0 !important;
+            max-width: none !important;
+            width: 100% !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .intro-menu .main-menu {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px 0;
+        }
+
+        .intro-menu .main-menu>li>a {
+            font-size: 20px;
+            color: var(--header-text-sticky);
+            text-shadow: none;
+            font-weight: 600;
+        }
+
+        /* Subpage Content Padding */
+        .subpage-content {
+            padding-top: 120px;
+            /* Space for fixed header */
+            min-height: 80vh;
+        }
+
+        .logo-img {
+            height: 80px;
+            /* Smaller logo for subpages if needed, or keep original */
+        }
+
+        /* We hide the large central logo from index in subpages or adjust it */
+        .intro-ci {
+            display: none;
+        }
+
+        /* But we need a logo IN the menu for subpages usually, or just keep the menu as is. 
+         The current design has Logo centered above menu in Index. 
+         For subpages, let's keep the menu simple or add a small logo to the left if needed.
+         For now, I will keep the menu interactions same.
+      */
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed Header for Subpages -->
+    <nav class="intro-menu sticky">
+        <ul class="main-menu">
+            <li class="has-sub">
+                <a href="index.html#intro-top">병원소개</a>
+                <ul class="sub-menu">
+                    <li><a href="index.html#doctors-section">의료진 소개</a></li>
+                    <li><a href="index.html#tour-section">병원 둘러보기</a></li>
+                    <li><a href="index.html#history-section">History</a></li>
+                    <li><a href="index.html#hours-section">진료시간</a></li>
+                    <li><a href="index.html#location-section">오시는 길</a></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="a.html">내과센터</a>
+                <ul class="sub-menu">
+                    <li><a href="a.html">심장·호흡기</a></li>
+                    <li><a href="a.html">신장·비뇨기</a></li>
+                    <li><a href="a.html">소화기</a></li>
+                    <li><a href="a.html">내분비</a></li>
+                    <li><a href="a.html">종양</a></li>
+                    <li><a href="a.html">피부</a></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="b.html">외과센터</a>
+                <ul class="sub-menu">
+                    <li><a href="b.html">정형외과</a></li>
+                    <li><a href="b.html">치과</a></li>
+                    <li><a href="b.html">일반·종양외과</a></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="c.html">고양이전문센터</a>
+                <ul class="sub-menu">
+                    <li><a href="c.html">진료실</a></li>
+                    <li><a href="c.html">대기실</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="d.html">건강검진센터</a>
+            </li>
+            <li class="has-sub">
+                <a href="#">그린벨 소식</a>
+                <!-- Removing links for now or keeping external? User said 'remove news section' from index. 
+               But menu might still exist. Keeping external links as requested in previous turn. -->
+                <ul class="sub-menu">
+                    <li><a href="https://blog.naver.com/greenbellanimal" target="_blank">블로그</a></li>
+                    <li><a href="https://www.instagram.com/greenbellanimal/" target="_blank">인스타그램</a></li>
+                    <li><a href="https://www.facebook.com/share/1AS8kG6rg1/?mibextid=wwXIfr" target="_blank">페이스북</a>
+                    </li>
+                    <li><a href="https://www.youtube.com/@greenbell_animal" target="_blank">유튜브</a></li>
+                </ul>
+            </li>
+
+            <!-- Mobile Toggle Button (Visible on mobile) -->
+            <button class="menu-toggle" aria-label="메뉴 열기"
+                style="position:absolute; right: 20px; top: 15px; display: none;">☰</button>
+        </ul>
+    </nav>
+
+    <!-- Mobile Toggle (Absolute position fix for this template) -->
+    <button class="menu-toggle" aria-label="메뉴 열기"
+        style="position: fixed; top: 15px; left: 20px; z-index: 2000; font-size: 24px; background:none; border:none; color: #fff;">☰</button>
+
+    <section class="subpage-content">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+            <h1 style="text-align: center; margin-bottom: 60px; font-size: 2.5rem; color: #333;">내과센터</h1>
+
+            <div id="sect-1" class="sub-section" style="margin-bottom: 80px;">
+                <h2
+                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
+                    심장·호흡기 내과</h2>
+                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
+                    <p style="font-size: 1.1rem; color: #555;">심장 및 호흡기 질환에 대한 전문적인 진단과 치료를 제공합니다.</p>
+                </div>
+            </div>
+
+            <div id="sect-2" class="sub-section" style="margin-bottom: 80px;">
+                <h2
+                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
+                    신장·비뇨기 내과</h2>
+                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
+                    <p style="font-size: 1.1rem; color: #555;">만성 신부전, 결석 등 신장 및 비뇨기계 질환을 집중 관리합니다.</p>
+                </div>
+            </div>
+
+            <div id="sect-3" class="sub-section" style="margin-bottom: 80px;">
+                <h2
+                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
+                    소화기 내과</h2>
+                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
+                    <p style="font-size: 1.1rem; color: #555;">구토, 설사, 췌장염 등 소화기 질환에 대한 정밀 검사와 치료를 진행합니다.</p>
+                </div>
+            </div>
+
+            <div id="sect-4" class="sub-section" style="margin-bottom: 80px;">
+                <h2
+                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
+                    내분비 내과</h2>
+                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
+                    <p style="font-size: 1.1rem; color: #555;">당뇨, 쿠싱증후군, 갑상선 질환 등 호르몬성 질환을 전문적으로 다룹니다.</p>
+                </div>
+            </div>
+
+            <div id="sect-5" class="sub-section" style="margin-bottom: 80px;">
+                <h2
+                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
+                    종양 내과</h2>
+                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
+                    <p style="font-size: 1.1rem; color: #555;">항암 치료 및 종양 관리를 통해 환자의 삶의 질을 높입니다.</p>
+                </div>
+            </div>
+
+            <div id="sect-6" class="sub-section" style="margin-bottom: 80px;">
+                <h2
+                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
+                    피부과</h2>
+                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
+                    <p style="font-size: 1.1rem; color: #555;">난치성 피부 질환, 알러지성 피부염 등을 정확히 진단하고 치료합니다.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="location-section" style="padding:60px 20px; background:#111; color:#fff;">
+        <div style="max-width:1400px; margin:0 auto;">
+            <!-- Maps removed for subpages as requested -->
+            <div style="
+        border-top:1px solid rgba(255,255,255,0.25);
+        padding-top:40px;
+        font-size:14px;
+        line-height:1.8;
+        opacity:0.8;
+        text-align:center;
+      ">
+                <p>사업자번호 : 210-38-94302 ｜ 대표자 : 성지세</p>
+                <p>TEL : 043-882-7975 ｜ E-mail : greenbellequine@naver.com</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

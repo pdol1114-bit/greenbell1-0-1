@@ -1,0 +1,827 @@
+/* =================================================
+   기본 설정 (RESET)
+   - 브라우저별 기본 여백을 제거하고 크기 계산 방식을 통일합니다.
+   - 브라우저별 기본 여백을 제거하고 크기 계산 방식을 통일합니다.
+4: ================================================= */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+:root {
+    --primary-color: #004d40;
+    /* Deep Green */
+    --secondary-color: #00796b;
+    /* Lighter Green */
+    --accent-color: #e0f2f1;
+    /* Very Light Green */
+    --text-color: #333;
+    --light-text: #fff;
+    --bg-light: #f9f9f9;
+    /* Wooridle Inspired Colors */
+    --header-bg-sticky: rgba(0, 0, 0, 0.8);
+    --header-text-sticky: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 패딩과 테두리가 너비에 포함되도록 설정 */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: 'Noto Sans KR', sans-serif;
+    /* 모바일에서 클릭 시 발생하는 파란색 하이라이트 제거 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =================================================
+   인트로 섹션 (비디오 배경)
+   - 화면 전체를 꽉 채우는 배경 비디오 영역입니다.
+================================================= */
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* 화면 높이 전체 차지 */
+    overflow: hidden;
+    /* 넘치는 비디오 부분 숨김 */
+}
+
+.intro-video {
+    position: absolute;
+    inset: 0;
+    /* top, left, right, bottom: 0과 동일 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 비율을 유지하며 화면을 가득 채움 */
+    z-index: 1;
+    /* 가장 뒤쪽에 배치 */
+}
+
+/* =================================================
+   CI (로고 영역)
+   - 중앙 상단에 배치되는 로고 이미지 설정입니다.
+================================================= */
+.intro-ci {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 정확한 가로 중앙 정렬 */
+    z-index: 30;
+    /* 메뉴보다 위에 위치 */
+}
+
+.intro-ci img {
+    height: 120px;
+    width: auto;
+}
+
+/* =================================================
+   데스크톱 메뉴 (PC 버전)
+   - 넓은 화면에서 가로로 배치되는 메인 네비게이션입니다.
+================================================= */
+.intro-menu {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    width: 90vw;
+    max-width: 1400px;
+    transition: background-color 0.4s ease;
+    /* 배경색만 부드럽게 변하게 합니다 */
+}
+
+.intro-menu .main-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    /* 메뉴 아이템들을 양 끝으로 균등 배분 */
+    align-items: flex-start;
+}
+
+.intro-menu .main-menu>li {
+    position: relative;
+}
+
+.intro-menu .main-menu>li>a {
+    display: inline-block;
+    padding: 10px 6px;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* 밝은 배경에서도 잘 보이게 그림자 처리 */
+    cursor: pointer;
+}
+
+/* 마우스 호버 시 강조색 (연두색 계열) */
+.intro-menu .main-menu>li>a:hover {
+    color: #a8cf45;
+}
+
+/* 1. 기본 메뉴 상태: 위치 이동 애니메이션을 아예 제거 */
+.intro-menu {
+    position: absolute;
+    top: 160px;
+    /* 원래 위치 */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    width: 90vw;
+    max-width: 1400px;
+    /* 배경색(background-color)만 부드럽게 변하도록 설정 (top이나 transform은 제외) */
+    transition: background-color 0.4s ease;
+}
+
+/* 2. 스크롤 시 고정 상태: 아이보리/화이트 배경으로 변경 (Wooridle Style) */
+.intro-menu.sticky {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    /* 검정 배경이 화면 끝까지 차도록 설정 */
+    max-width: none;
+    background-color: var(--header-bg-sticky) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* 그림자 추가 */
+    z-index: 1000;
+    padding: 0;
+    /* 패딩을 0으로 잡아야 어제 맞춘 간격이 안 틀어집니다 */
+}
+
+/* 고정 상태에서도 메뉴 글자들은 어제처럼 1400px 안에 고정 */
+.intro-menu.sticky .main-menu {
+    width: 90vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 0;
+    /* 고정 시 메뉴바의 위아래 높이 적정값 */
+}
+
+/* 고정 시 글자 크기와 색상 변경 (검정색) */
+.intro-menu.sticky .main-menu>li>a {
+    font-size: 20px;
+    /* 약간 줄여서 세련되게 */
+    color: var(--header-text-sticky);
+    text-shadow: none;
+    font-weight: 600;
+}
+
+.intro-menu.sticky .main-menu>li>a:hover {
+    color: var(--primary-color);
+}
+
+/* =================================================
+   서브 메뉴 (PC + Mobile 공통 스타일)
+   - 기본적으로 숨겨져 있다가 조건에 따라 나타납니다.
+================================================= */
+.intro-menu .sub-menu {
+    list-style: none;
+    margin-top: 8px;
+    overflow: hidden;
+    max-height: 0;
+    /* 높이를 0으로 설정하여 숨김 */
+    opacity: 0;
+    padding: 0;
+    background: transparent;
+    /* 부드러운 슬라이딩 다운 효과 */
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+    pointer-events: none;
+    /* 숨겨진 상태에서 클릭 방지 */
+}
+
+.intro-menu .sub-menu li a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    line-height: 2.2;
+    /* 줄 간격을 주어 글자가 뭉쳐 보이지 않게 합니다 */
+}
+
+.intro-menu .sub-menu li a:hover {
+    color: #a8cf45;
+}
+
+/* [모바일/태블릿] 클릭 시 .open 클래스가 추가되면 서브메뉴 노출 (PC에서는 무시) */
+@media (max-width: 768px) {
+    .intro-menu .has-sub.open>.sub-menu {
+        max-height: 800px;
+        opacity: 1;
+        padding: 6px 0;
+        pointer-events: auto;
+    }
+}
+
+/* =================================================
+   PC 마우스 호버 시 서브 메뉴 노출
+   - 마우스 사용 환경에서만 호버 동작이 작동하도록 제한
+================================================= */
+@media (hover: hover) and (pointer: fine) {
+    .intro-menu .has-sub:hover>.sub-menu {
+        max-height: 500px;
+        opacity: 1;
+        padding: 6px 0;
+        pointer-events: auto;
+    }
+
+    .intro-menu .has-sub:hover>a {
+        color: #a8cf45;
+    }
+}
+
+/* =================================================
+   인사말 영역 (공통)
+================================================= */
+.intro-greeting {
+    position: absolute;
+    z-index: 15;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    /* 텍스트가 클릭을 방해하지 않도록 설정 */
+}
+
+/* =================================================
+   인사말 영역 (PC 전용 배치)
+================================================= */
+@media (min-width: 769px) {
+    .intro-greeting {
+        left: 50%;
+        bottom: 80px;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .greeting-main {
+        font-size: 36px;
+        margin-bottom: 12px;
+    }
+
+    .greeting-sub {
+        font-size: 19px;
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+}
+
+/* =================================================
+   모바일 대응 (768px 이하)
+   - 상단 고정 바, 햄버거 메뉴, 사이드 메뉴 구현
+================================================= */
+.menu-toggle {
+    display: none;
+    /* PC에서는 숨김 */
+}
+
+@media (max-width: 768px) {
+
+    /* 모바일 상단 고정 헤더 */
+    .intro-ci {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        /* iOS 노치 디자인 대응 (Safe Area) */
+        padding-top: env(safe-area-inset-top, 0px);
+        height: calc(56px + env(safe-area-inset-top, 0px));
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 30;
+    }
+
+    .intro-ci img {
+        height: 38px;
+    }
+
+    /* 햄버거 버튼 */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 16px;
+        top: calc(50% + (env(safe-area-inset-top, 0px) / 2));
+        transform: translateY(-50%);
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: #ffffff;
+        z-index: 31;
+        cursor: pointer;
+    }
+
+    /* 모바일 좌측 슬라이드 메뉴 패널 */
+    .intro-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 45vw;
+        padding: calc(80px + env(safe-area-inset-top, 0px)) 12px 24px;
+        background: rgba(0, 0, 0, 0.95);
+        transform: translateX(-100%);
+        /* 왼쪽 밖으로 숨김 */
+        transition: transform 0.35s ease;
+        z-index: 20;
+    }
+
+    /* 메뉴 열림 상태 */
+    .intro-menu.open {
+        transform: translateX(0);
+    }
+
+    .intro-menu .main-menu {
+        flex-direction: column;
+        /* 세로 정렬 */
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .intro-menu .main-menu>li>a {
+        font-size: 20px;
+        padding: 4px 0;
+    }
+
+    /* 모바일용 인사말 위치 재조정 (상단 배치) */
+    .intro-greeting {
+        width: 100%;
+        max-width: none;
+        /* ⭐ 이 줄 */
+        padding: 0 20px;
+        /* 좌우 여백만 최소로 유지 */
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        top: calc(200px + env(safe-area-inset-top, 0px));
+    }
+
+    .greeting-main {
+        font-size: 25px;
+        margin-bottom: 8px;
+    }
+
+    .greeting-sub {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    /* 메뉴 오픈 시 인사말 숨김 처리용 클래스 */
+    .intro-greeting.hide {
+        transform: translateX(-50%) translateY(20px);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+}
+
+/* =================================================
+   기기별 요소 노출 제어 (헬퍼 클래스)
+================================================= */
+.pc-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .pc-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+}
+
+/* =================================================
+   의료진 소개 섹션 (지그재그 레이아웃)
+================================================= */
+.doctors-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.doctors-section .container {
+    max-width: 1200px;
+    /* PC에서 가로 폭을 적절히 제한 */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-main-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+    color: #222;
+    font-weight: 700;
+}
+
+/* 프로필 아이템 기본 설정 (Flexbox 사용) */
+.doctor-item {
+    display: flex;
+    align-items: center;
+    /* 사진과 글의 높이 중앙 정렬 */
+    gap: 80px;
+    /* 사진과 글 사이의 간격 */
+    margin-bottom: 120px;
+}
+
+/* 사진 영역 (A) */
+.doctor-photo {
+    flex: 1;
+    /* 공간 차지 비율 */
+    max-width: 450px;
+    /* 사진이 너무 커지지 않게 제한 */
+}
+
+.doctor-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    /* 세련된 라운드 처리 */
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.08);
+    /* 은은한 그림자 */
+}
+
+/* 텍스트 영역 (B) */
+.doctor-info {
+    flex: 1.2;
+}
+
+.info-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #a8cf45;
+    /* 그린벨 포인트 컬러 */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.info-header .role {
+    font-size: 18px;
+    color: #a8cf45;
+    font-weight: 700;
+    display: block;
+}
+
+.info-header .name {
+    font-size: 36px;
+    color: #111;
+    margin-top: 5px;
+}
+
+.info-body h4 {
+    font-size: 20px;
+    margin: 25px 0 12px;
+    color: #333;
+    font-weight: 600;
+}
+
+.info-body ul {
+    list-style: none;
+}
+
+.info-body ul li {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+/* 리스트 앞의 초록색 점 */
+.info-body ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a8cf45;
+    font-weight: bold;
+}
+
+/* ✨ [핵심] 짝수 번째(2, 4, 6) 아이템만 좌우 반전 */
+.doctor-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* =================================================
+   모바일 최적화 (768px 이하)
+================================================= */
+@media (max-width: 768px) {
+
+    .doctor-item,
+    .doctor-item:nth-child(even) {
+        flex-direction: column;
+        /* 지그재그를 풀고 수직으로 배치 */
+        gap: 30px;
+        margin-bottom: 80px;
+        text-align: center;
+        /* 모바일은 중앙 정렬이 깔끔함 */
+    }
+
+    .info-header {
+        display: block;
+        /* 모바일에서 밑줄 너비 꽉 차게 */
+    }
+
+    .info-body ul li {
+        text-align: left;
+        /* 리스트 내용은 왼쪽 정렬 유지 */
+    }
+
+    .doctor-photo {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .section-main-title {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+/* =================================================
+   간호 및 보건팀 슬라이더 섹션
+================================================= */
+.staff-slider-container {
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* 개별 카드 디자인 */
+.staff-card {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    /* ← 핵심 */
+    flex-direction: column;
+    align-items: center;
+    /* ← 핵심 */
+    text-align: center;
+}
+
+.staff-card:hover {
+    transform: translateY(-10px);
+    /* 마우스 올리면 살짝 들림 */
+}
+
+/* 카드 내 사진 설정 */
+.staff-photo {
+    width: 100%;
+    height: 600px;
+    /* Reduced height to crop bottom slightly */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.staff-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Changed to cover to fill area */
+    object-position: top;
+    /* Keep the top (head) visible, crop bottom */
+}
+
+/* 카드 내 텍스트 설정 */
+.staff-role {
+    display: block;
+    font-size: 14px;
+    color: #222;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.staff-name {
+    font-size: 22px;
+    color: #222;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+/* ================================
+   PC 전용 미세 조정
+================================ */
+@media (min-width: 769px) {
+    .staff-role {
+        margin-top: 20px;
+        /* Separate text from image */
+    }
+}
+
+/* ================================
+   모바일 전용 미세 조정
+================================ */
+@media (max-width: 768px) {
+    .staff-photo {
+        margin-top: 0;
+    }
+}
+
+/* =================================================
+   Swiper 컨트롤러(버튼/점) 커스텀
+================================================= */
+/* 좌우 화살표 색상 변경 */
+.staff-slider .swiper-button-next,
+.staff-slider .swiper-button-prev {
+    color: #a8cf45;
+    top: 50%;
+    /* 중앙 배치 */
+}
+
+/* 하단 페이지네이션 점 색상 변경 */
+.staff-slider .swiper-pagination-bullet-active {
+    background: #a8cf45;
+    width: 24px;
+    /* 활성화된 점은 길게 */
+    border-radius: 10px;
+}
+
+/* 모바일 대응 (간격 조정) */
+@media (max-width: 768px) {
+    .staff-photo {
+        height: 450px;
+    }
+
+    .staff-slider-container {
+        margin-top: 60px;
+    }
+
+    .staff-name {
+        font-size: 18px;
+    }
+}
+
+:root {
+    --swiper-theme-color: #a8cf45;
+}
+
+/* =========================
+   오시는 길 지도 모바일 1열 처리
+========================= */
+@media (max-width: 768px) {
+    #location-section>div>div {
+        grid-template-columns: 1fr !important;
+        gap: 60px;
+    }
+}
+
+/* =========================
+   New Sections: Centers & News
+========================= */
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+/* Centers Grid */
+.centers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.center-card {
+    background: #fff;
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.center-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--secondary-color);
+}
+
+.center-icon {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+.center-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.center-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* News Grid */
+.news-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 50px auto 0;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    text-decoration: none;
+}
+
+.news-item:hover {
+    transform: translateX(10px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.news-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.news-date .day {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.news-date .month {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+.news-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #222;
+    font-weight: 600;
+}
+
+.news-content p {
+    font-size: 1rem;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .news-img {
+        margin-bottom: 15px;
+        width: 100% !important;
+        height: 200px !important;
+        margin-right: 0 !important;
+    }
+
+    .news-content h3 {
+        font-size: 1.1rem;
+    }
+}
