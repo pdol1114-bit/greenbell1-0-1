@@ -8,122 +8,70 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <title>내과센터 - 그린벨 동물의료센터</title>
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-        /* Subpage Header Adjustment */
-        .intro-menu {
-            background-color: var(--header-bg-sticky) !important;
-            position: fixed !important;
-            top: 0 !important;
-            padding: 0 !important;
-            max-width: none !important;
-            width: 100% !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-        }
-
-        .intro-menu .main-menu {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 15px 0;
-        }
-
-        .intro-menu .main-menu>li>a {
-            font-size: 20px;
-            color: var(--header-text-sticky);
-            text-shadow: none;
-            font-weight: 600;
-        }
-
-        /* Subpage Content Padding */
-        .subpage-content {
-            padding-top: 120px;
-            /* Space for fixed header */
-            min-height: 80vh;
-        }
-
-        .logo-img {
-            height: 80px;
-            /* Smaller logo for subpages if needed, or keep original */
-        }
-
-        /* We hide the large central logo from index in subpages or adjust it */
-        .intro-ci {
-            display: none;
-        }
-
-        /* But we need a logo IN the menu for subpages usually, or just keep the menu as is. 
-         The current design has Logo centered above menu in Index. 
-         For subpages, let's keep the menu simple or add a small logo to the left if needed.
-         For now, I will keep the menu interactions same.
-      */
-    </style>
 </head>
 
 <body>
 
-    <!-- Fixed Header for Subpages -->
-    <nav class="intro-menu sticky">
-        <ul class="main-menu">
-            <li class="has-sub">
-                <a href="index.html#intro-top">병원소개</a>
-                <ul class="sub-menu">
-                    <li><a href="index.html#doctors-section">의료진 소개</a></li>
-                    <li><a href="index.html#tour-section">병원 둘러보기</a></li>
-                    <li><a href="index.html#history-section">History</a></li>
-                    <li><a href="index.html#hours-section">진료시간</a></li>
-                    <li><a href="index.html#location-section">오시는 길</a></li>
-                </ul>
-            </li>
-            <li class="has-sub">
-                <a href="a.html">내과센터</a>
-                <ul class="sub-menu">
-                    <li><a href="a.html">심장·호흡기</a></li>
-                    <li><a href="a.html">신장·비뇨기</a></li>
-                    <li><a href="a.html">소화기</a></li>
-                    <li><a href="a.html">내분비</a></li>
-                    <li><a href="a.html">종양</a></li>
-                    <li><a href="a.html">피부</a></li>
-                </ul>
-            </li>
-            <li class="has-sub">
-                <a href="b.html">외과센터</a>
-                <ul class="sub-menu">
-                    <li><a href="b.html">정형외과</a></li>
-                    <li><a href="b.html">치과</a></li>
-                    <li><a href="b.html">일반·종양외과</a></li>
-                </ul>
-            </li>
-            <li class="has-sub">
-                <a href="c.html">고양이전문센터</a>
-                <ul class="sub-menu">
-                    <li><a href="c.html">진료실</a></li>
-                    <li><a href="c.html">대기실</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="d.html">건강검진센터</a>
-            </li>
-            <li class="has-sub">
-                <a href="#">그린벨 소식</a>
-                <!-- Removing links for now or keeping external? User said 'remove news section' from index. 
-               But menu might still exist. Keeping external links as requested in previous turn. -->
-                <ul class="sub-menu">
-                    <li><a href="https://blog.naver.com/greenbellanimal" target="_blank">블로그</a></li>
-                    <li><a href="https://www.instagram.com/greenbellanimal/" target="_blank">인스타그램</a></li>
-                    <li><a href="https://www.facebook.com/share/1AS8kG6rg1/?mibextid=wwXIfr" target="_blank">페이스북</a>
-                    </li>
-                    <li><a href="https://www.youtube.com/@greenbell_animal" target="_blank">유튜브</a></li>
-                </ul>
-            </li>
+    <section class="intro subpage-header">
+        <div class="intro-ci">
+            <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+            <a href="index.html#intro-top"><img src="images/CI.png" alt="그린벨 동물의료센터 CI"></a>
+        </div>
 
-            <!-- Mobile Toggle Button (Visible on mobile) -->
-            <button class="menu-toggle" aria-label="메뉴 열기"
-                style="position:absolute; right: 20px; top: 15px; display: none;">☰</button>
-        </ul>
-    </nav>
-
-    <!-- Mobile Toggle (Absolute position fix for this template) -->
-    <button class="menu-toggle" aria-label="메뉴 열기"
-        style="position: fixed; top: 15px; left: 20px; z-index: 2000; font-size: 24px; background:none; border:none; color: #fff;">☰</button>
+        <nav class="intro-menu sticky">
+            <ul class="main-menu">
+                <li class="has-sub">
+                    <a href="index.html#intro-top">병원소개</a>
+                    <ul class="sub-menu">
+                        <li><a href="index.html#doctors-section">의료진 소개</a></li>
+                        <li><a href="index.html#tour-section">병원 둘러보기</a></li>
+                        <li><a href="index.html#history-section">History</a></li>
+                        <li><a href="index.html#hours-section">진료시간</a></li>
+                        <li><a href="index.html#location-section">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="a.html">내과센터</a>
+                    <ul class="sub-menu">
+                        <li><a href="a.html">심장·호흡기</a></li>
+                        <li><a href="a.html">신장·비뇨기</a></li>
+                        <li><a href="a.html">소화기</a></li>
+                        <li><a href="a.html">내분비</a></li>
+                        <li><a href="a.html">종양</a></li>
+                        <li><a href="a.html">피부</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="b.html">외과센터</a>
+                    <ul class="sub-menu">
+                        <li><a href="b.html">정형외과</a></li>
+                        <li><a href="b.html">치과</a></li>
+                        <li><a href="b.html">일반·종양외과</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="c.html">고양이전문센터</a>
+                    <ul class="sub-menu">
+                        <li><a href="c.html">진료실</a></li>
+                        <li><a href="c.html">대기실</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="d.html">건강검진센터</a>
+                </li>
+                <li class="has-sub">
+                    <a href="#">그린벨 소식</a>
+                    <ul class="sub-menu">
+                        <li><a href="https://blog.naver.com/greenbellanimal" target="_blank">블로그</a></li>
+                        <li><a href="https://www.instagram.com/greenbellanimal/" target="_blank">인스타그램</a></li>
+                        <li><a href="https://www.facebook.com/share/1AS8kG6rg1/?mibextid=wwXIfr"
+                                target="_blank">페이스북</a></li>
+                        <li><a href="https://www.youtube.com/@greenbell_animal" target="_blank">유튜브</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </section>
 
     <section class="subpage-content">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">

@@ -141,21 +141,19 @@ body {
     transition: background-color 0.4s ease;
 }
 
-/* 2. 스크롤 시 고정 상태: 아이보리/화이트 배경으로 변경 (Wooridle Style) */
-.intro-menu.sticky {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    /* 검정 배경이 화면 끝까지 차도록 설정 */
-    max-width: none;
-    background-color: var(--header-bg-sticky) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* 그림자 추가 */
-    z-index: 1000;
-    padding: 0;
-    /* 패딩을 0으로 잡아야 어제 맞춘 간격이 안 틀어집니다 */
+@media (min-width: 769px) {
+    .intro-menu.sticky {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: none;
+        background-color: var(--header-bg-sticky) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 0;
+    }
 }
 
 /* 고정 상태에서도 메뉴 글자들은 어제처럼 1400px 안에 고정 */
@@ -823,5 +821,23 @@ body {
 
     .news-content h3 {
         font-size: 1.1rem;
+    }
+}
+
+/* =================================================
+   서브페이지 전용 헤더 (Subpage Headers)
+================================================= */
+.subpage-header {
+    height: auto !important;
+    background: #000;
+}
+
+.subpage-header .intro-menu {
+    top: 10px;
+}
+
+@media (max-width: 768px) {
+    .subpage-header {
+        height: 60px !important;
     }
 }
