@@ -2,69 +2,103 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.querySelector('.menu-toggle');
     const introMenu = document.querySelector('.intro-menu');
     const greeting = document.querySelector('.intro-greeting');
+    const menuLinks = document.querySelectorAll('.intro-menu a');
+    const currentPath = window.location.pathname;
 
     /* =========================
-       모바일 햄버거 버튼 토글
+       1. 초기 상태 설정: 현재 페이지 서브메뉴 자동 열기
     ========================= */
-    if (toggleBtn && introMenu) {
-        toggleBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation(); // 안드로이드 클릭 이벤트 중복 방지
-
-            introMenu.classList.toggle('open');
-
-            if (greeting) {
-                greeting.classList.toggle('hide');
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('.intro-menu .has-sub').forEach(item => {
+            const mainLink = item.querySelector('a');
+            const href = mainLink.getAttribute('href');
+            if (href && (currentPath.endsWith(href) || (currentPath === '/' && href === 'index.html'))) {
+                item.classList.add('open');
             }
         });
     }
 
     /* =========================
-       서브메뉴 토글 (안드로이드/iOS 공통 최적화)
+       2. 모바일 햄버거 버튼 토글
     ========================= */
-    const menuLinks = document.querySelectorAll('.intro-menu .has-sub > a');
+    if (toggleBtn && introMenu) {
+        toggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            introMenu.classList.toggle('open');
+            if (greeting) greeting.classList.toggle('hide');
+        });
+    }
 
+    /* =========================
+       3. 메뉴 링크 클릭 이벤트 (통합 관리)
+    ========================= */
     menuLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            // PC View (Width > 768px): Ignore script (hover handles it)
-            if (window.innerWidth > 768) return;
+            if (window.innerWidth > 768) return; // PC 영역은 제외
 
-            e.preventDefault();
-            e.stopPropagation(); // 이벤트 전파를 막아 오작동 방지
+            const parentLi = link.parentElement;
+            const hasSub = parentLi.classList.contains('has-sub');
+            const href = link.getAttribute('href');
 
-            const parent = link.parentElement;
-            const isOpen = parent.classList.contains('open');
+            // A. 서브메뉴가 있는 메인 항목 클릭 시
+            if (hasSub) {
+                const isOpen = parentLi.classList.contains('open');
 
-            // 다른 열려있는 서브메뉴 닫기
-            document.querySelectorAll('.intro-menu .has-sub.open').forEach(item => {
-                if (item !== parent) {
-                    item.classList.remove('open');
+                // 다른 서브메뉴 닫기
+                document.querySelectorAll('.intro-menu .has-sub.open').forEach(openedItem => {
+                    if (openedItem !== parentLi) openedItem.classList.remove('open');
+                });
+
+                // 토글 수행
+                if (!isOpen) {
+                    parentLi.classList.add('open');
+                } else {
+                    parentLi.classList.remove('open');
                 }
-            });
 
-            // 현재 클릭한 메뉴 토글
-            if (isOpen) {
-                parent.classList.remove('open');
-            } else {
-                parent.classList.add('open');
+                // 만약 href가 현재 페이지의 앵커인 경우 (예: a.html#sect-1)
+                const isAnchorToCurrent = href && (href.startsWith('#') || (href.includes('#') && currentPath.endsWith(href.split('#')[0])));
+
+                if (isAnchorToCurrent) {
+                    // 동일 페이지 내 이동이므로 메뉴를 닫음 (약간의 지연 후)
+                    setTimeout(() => {
+                        introMenu.classList.remove('open');
+                        if (greeting) greeting.classList.remove('hide');
+                    }, 100);
+                } else if (href === '#' || href.startsWith('#')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+            }
+            // B. 서브메뉴가 없는 일반 링크 또는 서브메뉴 내부 링크 클릭 시
+            else {
+                // 페이지 이동 또는 앵커 이동이 발생하므로 메뉴를 닫음
+                introMenu.classList.remove('open');
+                if (greeting) greeting.classList.remove('hide');
             }
         });
     });
 
-    // 메뉴 영역 밖 클릭 시 서브메뉴 닫기 처리 (선택사항)
+    /* =========================
+       4. 메뉴 영역 밖 클릭 시 닫기
+    ========================= */
     document.addEventListener('click', (e) => {
-        if (!introMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
-            introMenu.classList.remove('open');
-            if (greeting) greeting.classList.remove('hide');
+        if (introMenu.classList.contains('open')) {
+            if (!introMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                introMenu.classList.remove('open');
+                if (greeting) greeting.classList.remove('hide');
+            }
         }
     });
 });
-/* menu.js 하단 스크롤 부분 */
+
+/* =========================
+   5. 스크롤 시 Sticky 적용 (PC 전용)
+========================= */
 window.addEventListener('scroll', () => {
     const menuBar = document.querySelector('.intro-menu');
-
-    if (window.innerWidth > 768) {
-        // 스크롤이 메뉴 위치(160px)보다 더 내려갔을 때 sticky 적용
+    if (window.innerWidth > 768 && menuBar) {
         if (window.scrollY > 160) {
             menuBar.classList.add('sticky');
         } else {
@@ -72,75 +106,44 @@ window.addEventListener('scroll', () => {
         }
     }
 });
-/* 61행 부근 scroll 이벤트 종료 지점 바로 아래 추가 */
 
-document.querySelectorAll('.intro-menu a').forEach(link => {
-    link.addEventListener('click', (e) => {
-        const introMenu = document.querySelector('.intro-menu');
-        const greeting = document.querySelector('.intro-greeting');
-
-        // If navigation is occurring (default NOT prevented), close the mobile menu.
-        // This covers simple links AND parent links where toggle logic didn't fire (e.g. mixed input devices).
-        if (introMenu.classList.contains('open') && !e.defaultPrevented) {
-            introMenu.classList.remove('open');
-            if (greeting) {
-                greeting.classList.remove('hide');
-            }
-        }
-    });
-});
-
-/* =================================================
-   간호 및 보건팀 Swiper 슬라이더 초기화
-================================================= */
-const staffSwiper = new Swiper('.staff-slider', {
-    // 기본 설정
-    slidesPerView: 1,      // 한 번에 보여줄 카드 개수 (모바일 기본)
-    spaceBetween: 20,     // 카드 사이 간격
-    loop: true,           // 무한 반복 회전
-    centeredSlides: true, // 활성 슬라이드 중앙 배치
-
-    // 자동 재생
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-
-    // 하단 페이지 점(dots)
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-
-    // 좌우 화살표
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // 화면 크기에 따른 반응형 설정
-    breakpoints: {
-        // 768px 이상 (태블릿/PC)
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-            centeredSlides: false,
-        },
-        // 1024px 이상 (데스크톱)
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-            centeredSlides: false,
-        }
-    }
-});
-
-// Clean up .open class on resize to prevent mobile menu sticking in desktop view
+/* =========================
+   6. 창 크기 조절 시 초기화
+========================= */
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
         document.querySelectorAll('.intro-menu .has-sub.open').forEach(item => {
             item.classList.remove('open');
         });
-        document.querySelector('.intro-menu').classList.remove('open');
+        const introMenu = document.querySelector('.intro-menu');
+        if (introMenu) introMenu.classList.remove('open');
     }
 });
+
+/* =================================================
+   7. 간호 및 보건팀 Swiper 슬라이더 (index.html 전용일 수 있음)
+================================================= */
+if (document.querySelector('.staff-slider')) {
+    const staffSwiper = new Swiper('.staff-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: { slidesPerView: 2, spaceBetween: 30, centeredSlides: false },
+            1024: { slidesPerView: 3, spaceBetween: 40, centeredSlides: false }
+        }
+    });
+}

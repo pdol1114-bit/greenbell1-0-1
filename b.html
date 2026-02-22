@@ -33,28 +33,31 @@
                 <li class="has-sub">
                     <a href="a.html">내과센터</a>
                     <ul class="sub-menu">
-                        <li><a href="a.html">심장·호흡기</a></li>
-                        <li><a href="a.html">신장·비뇨기</a></li>
-                        <li><a href="a.html">소화기</a></li>
-                        <li><a href="a.html">내분비</a></li>
-                        <li><a href="a.html">종양</a></li>
-                        <li><a href="a.html">피부</a></li>
+                        <li><a href="a.html#sect-1">심장·호흡기</a></li>
+                        <li><a href="a.html#sect-2">신장·비뇨기</a></li>
+                        <li><a href="a.html#sect-3">소화기</a></li>
+                        <li><a href="a.html#sect-4">내분비</a></li>
+                        <li><a href="a.html#sect-5">종양</a></li>
+                        <li><a href="a.html#sect-6">피부</a></li>
                     </ul>
+
                 </li>
                 <li class="has-sub">
                     <a href="b.html">외과센터</a>
                     <ul class="sub-menu">
-                        <li><a href="b.html">정형외과</a></li>
-                        <li><a href="b.html">치과</a></li>
-                        <li><a href="b.html">일반·종양외과</a></li>
+                        <li><a href="b.html#sect-1">정형외과</a></li>
+                        <li><a href="b.html#sect-2">치과</a></li>
+                        <li><a href="b.html#sect-3">일반·종양외과</a></li>
                     </ul>
+
                 </li>
                 <li class="has-sub">
                     <a href="c.html">고양이전문센터</a>
                     <ul class="sub-menu">
-                        <li><a href="c.html">진료실</a></li>
-                        <li><a href="c.html">대기실</a></li>
+                        <li><a href="c.html#sect-1">진료실</a></li>
+                        <li><a href="c.html#sect-2">대기실</a></li>
                     </ul>
+
                 </li>
                 <li>
                     <a href="d.html">건강검진센터</a>
@@ -77,35 +80,87 @@
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
             <h1 style="text-align: center; margin-bottom: 60px; font-size: 2.5rem; color: #333;">외과센터</h1>
 
-            <div id="sect-1" class="sub-section" style="margin-bottom: 80px;">
-                <h2
-                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
-                    정형외과</h2>
-                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
-                    <p style="font-size: 1.1rem; color: #555;">골절, 슬개골 탈구, 십자인대 파열 등 관절 및 뼈 관련 수술을 전문적으로 집도합니다.</p>
+            <div class="service-grid">
+                <!-- 정형외과 -->
+                <div id="sect-1" class="service-card">
+                    <img src="images/각과 사진용/스크린샷/스크린샷 2026-01-06 오후 10.28.11.png" alt="정형외과"
+                        class="service-img">
+                    <div class="service-info">
+                        <h2>정형외과</h2>
+                        <p>골절, 슬개골 탈구, 십자인대 파열 등 관절 및 뼈 관련 수술을 전문적으로 집도합니다. 최첨단 수술 장비와 풍부한 임상 경험을 바탕으로 환자의 빠른 회복과 일상 복귀를
+                            도와드립니다.</p>
+                        <div class="equipment-gallery">
+                            <h4>관련 장비</h4>
+                            <div class="eq-list">
+                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS023.webp"
+                                        alt="장비"></div>
+                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS024.webp"
+                                        alt="장비"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 치과 -->
+                <div id="sect-2" class="service-card">
+                    <img src="images/각과 사진용/스크린샷/스크린샷 2026-01-06 오후 10.28.35.png" alt="치과" class="service-img">
+                    <div class="service-info">
+                        <h2>치과</h2>
+                        <p>스케일링, 발치, 구강 종양 수술 등 전문적인 치과 진료를 제공합니다. 구강 X-ray를 통한 정밀 진단 후, 통증을 최소화하는 안전한 치과 처치를 실시합니다.</p>
+                        <div class="equipment-gallery">
+                            <h4>관련 장비</h4>
+                            <div class="eq-list">
+                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS025.webp"
+                                        alt="장비"></div>
+                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS026.webp"
+                                        alt="장비"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 일반·종양외과 -->
+                <div id="sect-3" class="service-card">
+                    <img src="images/각과 사진용/스크린샷/스크린샷 2026-01-06 오후 10.28.53.png" alt="일반·종양외과"
+                        class="service-img">
+                    <div class="service-info">
+                        <h2>일반·종양외과</h2>
+                        <p>중성화 수술부터 고난이도 연부 조직 수술 및 종양 제거 수술을 진행합니다. 철저한 멸균 시스템과 실시간 모니터링을 통해 안전한 마취 및 수술 서비스를 제공합니다.
+                        </p>
+                        <div class="equipment-gallery">
+                            <h4>관련 장비</h4>
+                            <div class="eq-list">
+                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS027.webp"
+                                        alt="장비"></div>
+                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS020.png"
+                                        alt="장비"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div id="sect-2" class="sub-section" style="margin-bottom: 80px;">
-                <h2
-                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
-                    치과</h2>
-                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
-                    <p style="font-size: 1.1rem; color: #555;">스케일링, 발치, 구강 종양 수술 등 전문적인 치과 진료를 제공합니다.</p>
-                </div>
-            </div>
-
-            <div id="sect-3" class="sub-section" style="margin-bottom: 80px;">
-                <h2
-                    style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-color);">
-                    일반·종양외과</h2>
-                <div class="content-box" style="background: #f9f9f9; padding: 40px; border-radius: 12px;">
-                    <p style="font-size: 1.1rem; color: #555;">중성화 수술부터 고난이도 연부 조직 수술 및 종양 제거 수술을 진행합니다.</p>
-                </div>
-            </div>
-
         </div>
     </section>
+
+    <!-- Modal for Equipment Images -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        function openModal(element) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImg");
+            const src = element.querySelector('img').src;
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
 
     <section id="location-section" style="padding:60px 20px; background:#111; color:#fff;">
         <div style="max-width:1400px; margin:0 auto;">
