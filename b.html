@@ -2,262 +2,329 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <title>외과센터 - 그린벨 동물의료센터</title>
-    <link rel="stylesheet" href="css/style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <title>외과센터 - 그린벨 동물의료센터</title>
+        <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-    <section class="intro subpage-header">
-        <div class="intro-ci">
-            <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
-            <a href="index.html#intro-top"><img src="images/CI.png" alt="그린벨 동물의료센터 CI"></a>
-        </div>
-
-        <nav class="intro-menu sticky">
-            <ul class="main-menu">
-                <li class="has-sub">
-                    <a href="index.html#intro-top">병원소개</a>
-                    <ul class="sub-menu">
-                        <li><a href="index.html#doctors-section">의료진 소개</a></li>
-                        <li><a href="index.html#tour-section">병원 둘러보기</a></li>
-                        <li><a href="index.html#history-section">History</a></li>
-                        <li><a href="index.html#hours-section">진료시간</a></li>
-                        <li><a href="index.html#location-section">오시는 길</a></li>
-                    </ul>
-                </li>
-                <li class="has-sub">
-                    <a href="a.html">내과센터</a>
-                    <ul class="sub-menu">
-                        <li><a href="a.html#sect-1">심장·호흡기</a></li>
-                        <li><a href="a.html#sect-2">신장·비뇨기</a></li>
-                        <li><a href="a.html#sect-3">소화기</a></li>
-                        <li><a href="a.html#sect-4">내분비</a></li>
-                        <li><a href="a.html#sect-5">종양</a></li>
-                        <li><a href="a.html#sect-6">피부</a></li>
-                    </ul>
-
-                </li>
-                <li class="has-sub">
-                    <a href="b.html">외과센터</a>
-                    <ul class="sub-menu">
-                        <li><a href="b.html#sect-1">정형외과</a></li>
-                        <li><a href="b.html#sect-2">치과</a></li>
-                        <li><a href="b.html#sect-3">일반·종양외과</a></li>
-                    </ul>
-
-                </li>
-                <li class="has-sub">
-                    <a href="c.html">고양이전문센터</a>
-                    <ul class="sub-menu">
-                        <li><a href="c.html#sect-1">진료실</a></li>
-                        <li><a href="c.html#sect-2">대기실</a></li>
-                    </ul>
-
-                </li>
-                <li>
-                    <a href="d.html">건강검진센터</a>
-                </li>
-                <li class="has-sub">
-                    <a href="#">그린벨 소식</a>
-                    <ul class="sub-menu">
-                        <li><a href="https://blog.naver.com/greenbellanimal" target="_blank">블로그</a></li>
-                        <li><a href="https://www.instagram.com/greenbellanimal/" target="_blank">인스타그램</a></li>
-                        <li><a href="https://www.facebook.com/share/1AS8kG6rg1/?mibextid=wwXIfr"
-                                target="_blank">페이스북</a></li>
-                        <li><a href="https://www.youtube.com/@greenbell_animal" target="_blank">유튜브</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </section>
-
-    <section class="subpage-content">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
-            <h1 style="text-align: center; margin-bottom: 60px; font-size: 2.5rem; color: #333;">외과센터</h1>
-
-            <div class="service-grid">
-                <!-- 정형외과 -->
-                <div id="sect-1" class="service-card">
-                    <img src="images/orthopedic_surgery_bg.png" alt="정형외과" class="service-img">
-                    <div class="service-info">
-                        <h2>정형외과</h2>
-                        <p>그린벨 정형외과 센터는 슬개골 탈구, 전십자인대 파열(TPLO/CTWO), 복합 골절 등 반려동물의 보행 성능을 좌우하는 고난도 근골격계 수술을 전문적으로
-                            수행합니다.<br><br>
-                            대학병원급 고사양 수술용 현미경과 정밀 드릴 시스템을 활용하여 조직 손상을 최소화하며, C-arm(실시간 X-ray 투시 장치)을 통한 정확한 수복을 지향합니다.
-                            수술 후에는 개체별 맞춤 레이저 재활 치료와 체계적인 통증 관리를 병행하여 반려동물이 가장 빠른 시간 내에 건강한 걸음을 되찾을 수 있도록 돕습니다.</p>
-                        <div class="equipment-gallery">
-                            <h4>관련 장비</h4>
-                            <div class="eq-list">
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS003.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS006.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS007.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS009.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS013.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS014.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS015.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS016.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS020.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS021.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS022.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS023.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS024.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS025.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS026.webp"
-                                        alt="장비"></div>
-                            </div>
-                        </div>
-                    </div>
+        <section class="intro subpage-header">
+                <div class="intro-ci">
+                        <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+                        <a href="index.html#intro-top"><img src="images/CI.png" alt="그린벨 동물의료센터 CI"></a>
                 </div>
 
-                <!-- 치과 -->
-                <div id="sect-2" class="service-card">
-                    <img src="images/dentistry_bg.png" alt="치과" class="service-img">
-                    <div class="service-info">
-                        <h2>치과</h2>
-                        <p>치과 센터는 단순 스케일링을 넘어, 반려동물의 구강 삶의 질을 근본적으로 개선하는 전문 구강 외과 서비스를 제공합니다. 고해상도 구강 전용 X-ray와 전문 치과
-                            유닛을 통해 눈에 보이지 않는 치근단 질환까지 정밀하게 진단합니다.<br><br>
-                            난치성 구내염, 매복치 발치, 구강 종양 절제술 등 복합적인 구강 질환에 대해 안전한 호흡 마취와 국소 신경 차단을 병행하여 통증 없는 치료를 실천하며, 체계적인
-                            사후 관리를 통해 건강한 구강 환경을 유지할 수 있도록 지원합니다.</p>
-                        <div class="equipment-gallery">
-                            <h4>관련 장비</h4>
-                            <div class="eq-list">
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS003.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS006.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS007.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS009.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS013.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS014.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS015.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS016.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS020.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS021.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS022.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS023.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS024.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS025.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS026.webp"
-                                        alt="장비"></div>
-                            </div>
+                <nav class="intro-menu sticky">
+                        <ul class="main-menu">
+                                <li class="has-sub">
+                                        <a href="index.html#intro-top">병원소개</a>
+                                        <ul class="sub-menu">
+                                                <li><a href="index.html#doctors-section">의료진 소개</a></li>
+                                                <li><a href="index.html#tour-section">병원 둘러보기</a></li>
+                                                <li><a href="index.html#history-section">History</a></li>
+                                                <li><a href="index.html#hours-section">진료시간</a></li>
+                                                <li><a href="index.html#location-section">오시는 길</a></li>
+                                        </ul>
+                                </li>
+                                <li class="has-sub">
+                                        <a href="a.html">내과센터</a>
+                                        <ul class="sub-menu">
+                                                <li><a href="a.html#sect-1">심장·호흡기</a></li>
+                                                <li><a href="a.html#sect-2">신장·비뇨기</a></li>
+                                                <li><a href="a.html#sect-3">소화기</a></li>
+                                                <li><a href="a.html#sect-4">내분비</a></li>
+                                                <li><a href="a.html#sect-5">종양</a></li>
+                                                <li><a href="a.html#sect-6">피부</a></li>
+                                        </ul>
+
+                                </li>
+                                <li class="has-sub">
+                                        <a href="b.html">외과센터</a>
+                                        <ul class="sub-menu">
+                                                <li><a href="b.html#sect-1">정형외과</a></li>
+                                                <li><a href="b.html#sect-2">치과</a></li>
+                                                <li><a href="b.html#sect-3">일반·종양외과</a></li>
+                                        </ul>
+
+                                </li>
+                                <li class="has-sub">
+                                        <a href="c.html">고양이전문센터</a>
+                                        <ul class="sub-menu">
+                                                <li><a href="c.html#sect-1">진료실</a></li>
+                                                <li><a href="c.html#sect-2">대기실</a></li>
+                                        </ul>
+
+                                </li>
+                                <li>
+                                        <a href="d.html">건강검진센터</a>
+                                </li>
+                                <li class="has-sub">
+                                        <a href="#">그린벨 소식</a>
+                                        <ul class="sub-menu">
+                                                <li><a href="https://blog.naver.com/greenbellanimal"
+                                                                target="_blank">블로그</a></li>
+                                                <li><a href="https://www.instagram.com/greenbellanimal/"
+                                                                target="_blank">인스타그램</a></li>
+                                                <li><a href="https://www.facebook.com/share/1AS8kG6rg1/?mibextid=wwXIfr"
+                                                                target="_blank">페이스북</a></li>
+                                                <li><a href="https://www.youtube.com/@greenbell_animal"
+                                                                target="_blank">유튜브</a></li>
+                                        </ul>
+                                </li>
+                        </ul>
+                </nav>
+        </section>
+
+        <section class="subpage-content">
+                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+                        <h1 style="text-align: center; margin-bottom: 60px; font-size: 2.5rem; color: #333;">외과센터</h1>
+
+                        <div class="service-grid">
+                                <!-- 정형외과 -->
+                                <div id="sect-1" class="service-card">
+                                        <img src="images/orthopedic_surgery_bg.png" alt="정형외과" class="service-img">
+                                        <div class="service-info">
+                                                <h2>정형외과</h2>
+                                                <p>그린벨 정형외과 센터는 슬개골 탈구, 전십자인대 파열(TPLO/CTWO), 복합 골절 등 반려동물의 보행 성능을 좌우하는
+                                                        고난도 근골격계 수술을 전문적으로
+                                                        수행합니다.<br><br>
+                                                        대학병원급 고사양 수술용 현미경과 정밀 드릴 시스템을 활용하여 조직 손상을 최소화하며, C-arm(실시간 X-ray
+                                                        투시 장치)을 통한 정확한 수복을 지향합니다.
+                                                        수술 후에는 개체별 맞춤 레이저 재활 치료와 체계적인 통증 관리를 병행하여 반려동물이 가장 빠른 시간 내에 건강한
+                                                        걸음을 되찾을 수 있도록 돕습니다.</p>
+                                                <div class="equipment-gallery">
+                                                        <h4>관련 장비</h4>
+                                                        <div class="eq-list">
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS003.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS004.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS006.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS007.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS009.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS013.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS014.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS015.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS016.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS020.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS021.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS022.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS023.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS024.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS025.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS026.webp" alt="장비">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- 치과 -->
+                                <div id="sect-2" class="service-card">
+                                        <img src="images/dentistry_bg.png" alt="치과" class="service-img">
+                                        <div class="service-info">
+                                                <h2>치과</h2>
+                                                <p>치과 센터는 단순 스케일링을 넘어, 반려동물의 구강 삶의 질을 근본적으로 개선하는 전문 구강 외과 서비스를 제공합니다.
+                                                        고해상도 구강 전용 X-ray와 전문 치과
+                                                        유닛을 통해 눈에 보이지 않는 치근단 질환까지 정밀하게 진단합니다.<br><br>
+                                                        난치성 구내염, 매복치 발치, 구강 종양 절제술 등 복합적인 구강 질환에 대해 안전한 호흡 마취와 국소 신경 차단을
+                                                        병행하여 통증 없는 치료를 실천하며, 체계적인
+                                                        사후 관리를 통해 건강한 구강 환경을 유지할 수 있도록 지원합니다.</p>
+                                                <div class="equipment-gallery">
+                                                        <h4>관련 장비</h4>
+                                                        <div class="eq-list">
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS003.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS004.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS006.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS007.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS009.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS013.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS014.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS015.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS016.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS020.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS021.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS022.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS023.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS024.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS025.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS026.webp" alt="장비">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- 일반·종양외과 -->
+                                <div id="sect-3" class="service-card">
+                                        <img src="images/oncology_surgery_bg.png" alt="일반·종양외과" class="service-img">
+                                        <div class="service-info">
+                                                <h2>일반·종양외과</h2>
+                                                <p>일반·종양외과 센터는 중성화 수술과 같은 기초 수술부터 종양 제거, 간문맥 전신 단락(PSS), 횡격막 허니아 등 난이도
+                                                        높은 연부 조직 및 종양 수술을
+                                                        집도합니다.<br><br>
+                                                        실시간 마취 모니터링 시스템과 리가슈어(Ligasure) 등 첨단 혈관 봉합 장비를 사용하여 출혈과 수술 시간을
+                                                        최소화합니다. 특히 종양 수술의 경우, 내과 센터와의
+                                                        긴밀한 협진을 통해 수술 전후 항암 스케줄을 최적화하여 환자의 생존율과 삶의 질을 극대화하는 통합 수술 솔루션을
+                                                        제공합니다.</p>
+                                                <div class="equipment-gallery">
+                                                        <h4>관련 장비</h4>
+                                                        <div class="eq-list">
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS003.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS004.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS006.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS007.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS009.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS013.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS014.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS015.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS016.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS020.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS021.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS022.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS023.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS024.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS025.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS026.webp" alt="장비">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
                         </div>
-                    </div>
                 </div>
+        </section>
 
-                <!-- 일반·종양외과 -->
-                <div id="sect-3" class="service-card">
-                    <img src="images/oncology_surgery_bg.png" alt="일반·종양외과" class="service-img">
-                    <div class="service-info">
-                        <h2>일반·종양외과</h2>
-                        <p>일반·종양외과 센터는 중성화 수술과 같은 기초 수술부터 종양 제거, 간문맥 전신 단락(PSS), 횡격막 허니아 등 난이도 높은 연부 조직 및 종양 수술을
-                            집도합니다.<br><br>
-                            실시간 마취 모니터링 시스템과 리가슈어(Ligasure) 등 첨단 혈관 봉합 장비를 사용하여 출혈과 수술 시간을 최소화합니다. 특히 종양 수술의 경우, 내과 센터와의
-                            긴밀한 협진을 통해 수술 전후 항암 스케줄을 최적화하여 환자의 생존율과 삶의 질을 극대화하는 통합 수술 솔루션을 제공합니다.</p>
-                        <div class="equipment-gallery">
-                            <h4>관련 장비</h4>
-                            <div class="eq-list">
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS003.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS006.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS007.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS009.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS013.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS014.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS015.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS016.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS020.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS021.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS022.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS023.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS024.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS025.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS026.webp"
-                                        alt="장비"></div>
-                            </div>
+        <!-- Modal for Equipment Images -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="modalImg">
+        </div>
+
+        <script>
+                function openModal(element) {
+                        const modal = document.getElementById("imageModal");
+                        const modalImg = document.getElementById("modalImg");
+                        const src = element.querySelector('img').src;
+                        modal.style.display = "block";
+                        modalImg.src = src;
+                }
+
+                function closeModal() {
+                        document.getElementById("imageModal").style.display = "none";
+                }
+        </script>
+
+        <footer class="footer-wrapper" style="background: #fff; border-top: 1px solid #ddd; padding: 60px 0;">
+                <div class="container">
+                        <div style="text-align: center; color: #777; font-size: 0.9rem; line-height: 1.8;">
+                                <p>사업자번호 : 210-38-94302 ｜ 대표자 : 성지세</p>
+                                <p>TEL : 043-882-7975 ｜ E-mail : greenbellequine@naver.com</p>
+                                <p style="margin-top: 10px; font-weight: 500;" class="copyright">COPYRIGHT © GREENBELL
+                                        ANIMAL MEDICAL
+                                        CENTER. ALL
+                                        RIGHTS RESERVED.</p>
                         </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+        </footer>
 
-    <!-- Modal for Equipment Images -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="close-modal">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
-
-    <script>
-        function openModal(element) {
-            const modal = document.getElementById("imageModal");
-            const modalImg = document.getElementById("modalImg");
-            const src = element.querySelector('img').src;
-            modal.style.display = "block";
-            modalImg.src = src;
-        }
-
-        function closeModal() {
-            document.getElementById("imageModal").style.display = "none";
-        }
-    </script>
-
-    <footer class="footer-wrapper" style="background: #fff; border-top: 1px solid #ddd; padding: 60px 0;">
-        <div class="container">
-            <div style="text-align: center; color: #777; font-size: 0.9rem; line-height: 1.8;">
-                <p>사업자번호 : 210-38-94302 ｜ 대표자 : 성지세</p>
-                <p>TEL : 043-882-7975 ｜ E-mail : greenbellequine@naver.com</p>
-                <p style="margin-top: 10px; font-weight: 500;" class="copyright">COPYRIGHT © GREENBELL ANIMAL MEDICAL
-                    CENTER. ALL
-                    RIGHTS RESERVED.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/menu.js"></script>
+        <script src="js/menu.js"></script>
 </body>
 
 </html>
