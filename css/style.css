@@ -971,9 +971,8 @@ body {
 
 .service-img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
+    height: 300px;
+    object-fit: cover;
 }
 
 .service-info {
@@ -1079,7 +1078,7 @@ body {
 
 @media (max-width: 768px) {
     .service-img {
-        height: auto;
+        height: 200px;
     }
 
     .eq-item {
