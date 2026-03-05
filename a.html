@@ -2,466 +2,606 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <title>내과센터 - 그린벨 동물의료센터</title>
-    <link rel="stylesheet" href="css/style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <title>내과센터 - 그린벨 동물의료센터</title>
+        <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-    <section class="intro subpage-header">
-        <div class="intro-ci">
-            <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
-            <a href="index.html#intro-top"><img src="images/CI.png" alt="그린벨 동물의료센터 CI"></a>
+        <section class="intro subpage-header">
+                <div class="intro-ci">
+                        <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+                        <a href="index.html#intro-top"><img src="images/CI.png" alt="그린벨 동물의료센터 CI"></a>
+                </div>
+
+                <nav class="intro-menu sticky">
+                        <ul class="main-menu">
+                                <li class="has-sub">
+                                        <a href="index.html#intro-top">병원소개</a>
+                                        <ul class="sub-menu">
+                                                <li><a href="index.html#doctors-section">의료진 소개</a></li>
+                                                <li><a href="index.html#tour-section">병원 둘러보기</a></li>
+                                                <li><a href="index.html#history-section">History</a></li>
+                                                <li><a href="index.html#hours-section">진료시간</a></li>
+                                                <li><a href="index.html#location-section">오시는 길</a></li>
+                                        </ul>
+                                </li>
+                                <li class="has-sub">
+                                        <a href="a.html">내과센터</a>
+                                        <ul class="sub-menu">
+                                                <li><a href="a.html#sect-1">심장·호흡기</a></li>
+                                                <li><a href="a.html#sect-2">신장·비뇨기</a></li>
+                                                <li><a href="a.html#sect-3">소화기</a></li>
+                                                <li><a href="a.html#sect-4">내분비</a></li>
+                                                <li><a href="a.html#sect-5">종양</a></li>
+                                                <li><a href="a.html#sect-6">피부</a></li>
+                                        </ul>
+
+                                </li>
+                                <li class="has-sub">
+                                        <a href="b.html">외과센터</a>
+                                        <ul class="sub-menu">
+                                                <li><a href="b.html#sect-1">정형외과</a></li>
+                                                <li><a href="b.html#sect-2">치과</a></li>
+                                                <li><a href="b.html#sect-3">일반·종양외과</a></li>
+                                        </ul>
+
+                                </li>
+                                <li class="has-sub">
+                                        <a href="c.html">고양이전문센터</a>
+                                        <ul class="sub-menu">
+                                                <li><a href="c.html#sect-1">진료실</a></li>
+                                                <li><a href="c.html#sect-2">대기실</a></li>
+                                        </ul>
+
+                                </li>
+                                <li>
+                                        <a href="d.html">진단센터</a>
+                                </li>
+                                <li class="has-sub">
+                                        <a href="#">그린벨 소식</a>
+                                        <ul class="sub-menu">
+                                                <li><a href="https://blog.naver.com/greenbellanimal"
+                                                                target="_blank">블로그</a></li>
+                                                <li><a href="https://www.instagram.com/greenbellanimal/"
+                                                                target="_blank">인스타그램</a></li>
+                                                <li><a href="https://www.facebook.com/share/1AS8kG6rg1/?mibextid=wwXIfr"
+                                                                target="_blank">페이스북</a></li>
+                                                <li><a href="https://www.youtube.com/@greenbell_animal"
+                                                                target="_blank">유튜브</a></li>
+                                        </ul>
+                                </li>
+                        </ul>
+                </nav>
+        </section>
+
+        <section class="subpage-content">
+                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+                        <h1 style="text-align: center; margin-bottom: 60px; font-size: 2.5rem; color: #333;">내과센터</h1>
+
+                        <div class="service-grid">
+                                <!-- 심장·호흡기 -->
+                                <div id="sect-1" class="service-card">
+                                        <img src="images/cardiology_bg.png" alt="심장·호흡기 내과" class="service-img">
+                                        <div class="service-info">
+                                                <h2>심장·호흡기 내과</h2>
+                                                <p>그린벨 동물의료센터 심장·호흡기 센터는 반려동물의 생명과 직결되는 순환기 및 호흡기 질환에 대해 대학병원급 정밀 진단과
+                                                        전문적인 통합 관리 서비스를
+                                                        제공합니다.<br><br>
+                                                        단순한 증상 완화를 넘어, GE HealthCare의 고사양 심장 초음파(Vivid series)를 활용한 입체적인
+                                                        판독과 디지털 흉부 방사선(DR) 분석을 통해
+                                                        판막 질환, 비대성 심근증(HCM), 심장사상충 및 만성 기관지염 등 복합적인 질환의 근본 원인을 정확히
+                                                        규명합니다.<br><br>
+                                                        또한, 환자의 연령, 기저 질환, 생활 환경을 고려한 '맞춤형 심폐 관리 프로토콜'을 운영하여, 중증 응급 환자를
+                                                        위한 24시간 집중 산소 처치와 체계적인 약물
+                                                        조절을 통해 반려동물이 더욱 건강하고 편안하게 호흡하며 보호자와 오랜 시간 함께할 수 있도록 최선을 다합니다.
+                                                </p>
+                                                <div class="equipment-gallery">
+                                                        <h4>관련 장비</h4>
+                                                        <div class="eq-list">
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS001.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS002.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS003.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS004.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS005.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS006.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS008.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS009.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS010.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS011.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS012.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS014.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS017.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS018.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS019.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS024.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS027.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS028.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS029.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS030.jpg" alt="장비">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- 신장·비뇨기 -->
+                                <div id="sect-2" class="service-card">
+                                        <img src="images/nephrology_bg.png" alt="신장·비뇨기 내과" class="service-img">
+                                        <div class="service-info">
+                                                <h2>신장·비뇨기 내과</h2>
+                                                <p>그린벨 신장·비뇨기 센터는 급·만성 신부전, 하부 요로 질환(FLUTD), 결석증 등 복합적인 비뇨기계 질환에 대해 정밀
+                                                        혈액 분석 시스템과 SDMA 검사를 통한 조기
+                                                        진단 서비스를 제공합니다.<br><br>
+                                                        신장 손상의 정도를 다각도로 평가하여 개체별 맞춤 수액 처치와 식이 요법, 혈압 관리를 포함한 통합 신장 보존
+                                                        프로그램을 운영하며, 특히 고양이 환자의 만성
+                                                        신질환(CKD) 관리에 특화된 전문 케어를 제공하여 삶의 질을 획기적으로 개선합니다.</p>
+                                                <div class="equipment-gallery">
+                                                        <h4>관련 장비</h4>
+                                                        <div class="eq-list">
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS001.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS002.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS003.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS004.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS005.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS006.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS008.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS009.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS010.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS011.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS012.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS014.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS017.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS018.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS019.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS024.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS027.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS028.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS029.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS030.jpg" alt="장비">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- 소화기 -->
+                                <div id="sect-3" class="service-card">
+                                        <img src="images/gastroenterology_bg.png" alt="소화기 내과" class="service-img">
+                                        <div class="service-info">
+                                                <h2>소화기 내과</h2>
+                                                <p>소화기 센터는 만성 구토, 설사, IBD(염증성 장질환), 췌장염 및 간·담도 질환에 대해 첨단 연성 내시경과 고해상도 복부
+                                                        초음파를 활용한 차별화된 진단을
+                                                        시행합니다.<br><br>
+                                                        풍부한 임상 경험을 가진 의료진이 식이 알러지 분석과 마이크로바이옴 관리를 병행하여 근본적인 소화기 건강 회복을
+                                                        돕고, 필요한 경우 복강경을 통한 최소 침습적 생검을
+                                                        통해 정확한 병리 진단을 도출합니다.</p>
+                                                <div class="equipment-gallery">
+                                                        <h4>관련 장비</h4>
+                                                        <div class="eq-list">
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS001.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS002.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS003.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS004.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS005.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS006.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS008.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS009.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS010.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS011.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS012.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS014.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS017.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS018.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS019.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS024.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS027.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS028.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS029.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS030.jpg" alt="장비">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- 내분비 -->
+                                <div id="sect-4" class="service-card">
+                                        <img src="images/endocrinology_bg.png" alt="내분비 내과" class="service-img">
+                                        <div class="service-info">
+                                                <h2>내분비 내과</h2>
+                                                <p>내분비 센터는 당뇨병, 쿠싱증후군(부신피질기능항진증), 갑상선 질환 등 평생 관리가 필요한 호르몬 질환에 대해 정밀 호르몬
+                                                        농도 측정 및 자극 검사(ACTH 등)를
+                                                        통한 체계적인 모니터링을 진행합니다.<br><br>
+                                                        실시간 연속 혈당 측정기(CGMS) 도입과 개별 환자의 대사 특성을 고려한 인슐린 용량 최적화 프로그램을 통해
+                                                        합병증 없이 안정적인 호르몬 균형을 유지할 수 있도록
+                                                        정교한 관리 전략을 수립합니다.</p>
+                                                <div class="equipment-gallery">
+                                                        <h4>관련 장비</h4>
+                                                        <div class="eq-list">
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS001.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS002.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS003.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS004.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS005.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS006.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS008.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS009.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS010.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS011.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS012.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS014.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS017.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS018.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS019.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS024.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS027.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS028.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS029.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS030.jpg" alt="장비">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- 종양 -->
+                                <div id="sect-5" class="service-card">
+                                        <img src="images/oncology_bg.png" alt="종양 내과" class="service-img">
+                                        <div class="service-info">
+                                                <h2>종양 내과</h2>
+                                                <p>종양 센터는 반려동물의 암 진단부터 항암 치료까지 환자의 삶의 질을 최우선으로 하는 맞춤형 항암 케어를 제공합니다. 미세바늘
+                                                        흡인 검사(FNA)와 생검을 통한 병리
+                                                        판독, 전이 평가를 위한 정밀 영상 진단을 기반으로 최적의 병기를 결정합니다.<br><br>
+                                                        부작용을 최소화한 표준 항암 프로토콜은 물론, 표적 항암 치료와 통증 관리를 병행하여 환자가 고통 없이 가족 곁을
+                                                        지킬 수 있도록 심리적 케어와 의료적 지원을
+                                                        통합적으로 제공합니다.</p>
+                                                <div class="equipment-gallery">
+                                                        <h4>관련 장비</h4>
+                                                        <div class="eq-list">
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS001.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS002.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS003.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS004.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS005.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS006.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS008.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS009.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS010.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS011.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS012.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS014.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS017.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS018.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS019.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS024.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS027.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS028.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS029.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS030.jpg" alt="장비">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- 피부과 -->
+                                <div id="sect-6" class="service-card">
+                                        <img src="images/dermatology_bg.png" alt="피부과" class="service-img">
+                                        <div class="service-info">
+                                                <h2>피부과</h2>
+                                                <p>피부 센터는 난치성 아토피, 알러지 질환, 만성 외이염 및 자가면역성 피부 질환에 대해 근본적인 원인 규명을 위한 면역 기능
+                                                        평가와 알러지 검사를
+                                                        시행합니다.<br><br>
+                                                        단순 약물 처방을 넘어, 면역 치료(Desensitization)와 레이저 치료, 환자별 약용 샴푸 처방 등
+                                                        다각적인 외용 처치를 병행하여 재발을 방지합니다. 특히
+                                                        피부 장벽 강화와 꾸준한 환경 관리를 통해 반려동물이 가려움 없는 건강한 일상을 되찾을 수 있도록 돕습니다.</p>
+                                                <div class="equipment-gallery">
+                                                        <h4>관련 장비</h4>
+                                                        <div class="eq-list">
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS001.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS002.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS003.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS004.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS005.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS006.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS008.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS009.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS010.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS011.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS012.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS014.png" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS017.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS018.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS019.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS024.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS027.webp" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS028.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS029.jpg" alt="장비">
+                                                                </div>
+                                                                <div class="eq-item" onclick="openModal(this)"><img
+                                                                                src="images/장비사진/INS030.jpg" alt="장비">
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+
+        <!-- Modal for Equipment Images -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="modalImg">
         </div>
 
-        <nav class="intro-menu sticky">
-            <ul class="main-menu">
-                <li class="has-sub">
-                    <a href="index.html#intro-top">병원소개</a>
-                    <ul class="sub-menu">
-                        <li><a href="index.html#doctors-section">의료진 소개</a></li>
-                        <li><a href="index.html#tour-section">병원 둘러보기</a></li>
-                        <li><a href="index.html#history-section">History</a></li>
-                        <li><a href="index.html#hours-section">진료시간</a></li>
-                        <li><a href="index.html#location-section">오시는 길</a></li>
-                    </ul>
-                </li>
-                <li class="has-sub">
-                    <a href="a.html">내과센터</a>
-                    <ul class="sub-menu">
-                        <li><a href="a.html#sect-1">심장·호흡기</a></li>
-                        <li><a href="a.html#sect-2">신장·비뇨기</a></li>
-                        <li><a href="a.html#sect-3">소화기</a></li>
-                        <li><a href="a.html#sect-4">내분비</a></li>
-                        <li><a href="a.html#sect-5">종양</a></li>
-                        <li><a href="a.html#sect-6">피부</a></li>
-                    </ul>
+        <script>
+                function openModal(element) {
+                        const modal = document.getElementById("imageModal");
+                        const modalImg = document.getElementById("modalImg");
+                        const src = element.querySelector('img').src;
+                        modal.style.display = "block";
+                        modalImg.src = src;
+                }
 
-                </li>
-                <li class="has-sub">
-                    <a href="b.html">외과센터</a>
-                    <ul class="sub-menu">
-                        <li><a href="b.html#sect-1">정형외과</a></li>
-                        <li><a href="b.html#sect-2">치과</a></li>
-                        <li><a href="b.html#sect-3">일반·종양외과</a></li>
-                    </ul>
+                function closeModal() {
+                        document.getElementById("imageModal").style.display = "none";
+                }
+        </script>
 
-                </li>
-                <li class="has-sub">
-                    <a href="c.html">고양이전문센터</a>
-                    <ul class="sub-menu">
-                        <li><a href="c.html#sect-1">진료실</a></li>
-                        <li><a href="c.html#sect-2">대기실</a></li>
-                    </ul>
 
-                </li>
-                <li>
-                    <a href="d.html">건강검진센터</a>
-                </li>
-                <li class="has-sub">
-                    <a href="#">그린벨 소식</a>
-                    <ul class="sub-menu">
-                        <li><a href="https://blog.naver.com/greenbellanimal" target="_blank">블로그</a></li>
-                        <li><a href="https://www.instagram.com/greenbellanimal/" target="_blank">인스타그램</a></li>
-                        <li><a href="https://www.facebook.com/share/1AS8kG6rg1/?mibextid=wwXIfr"
-                                target="_blank">페이스북</a></li>
-                        <li><a href="https://www.youtube.com/@greenbell_animal" target="_blank">유튜브</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </section>
-
-    <section class="subpage-content">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
-            <h1 style="text-align: center; margin-bottom: 60px; font-size: 2.5rem; color: #333;">내과센터</h1>
-
-            <div class="service-grid">
-                <!-- 심장·호흡기 -->
-                <div id="sect-1" class="service-card">
-                    <img src="images/cardiology_bg.png" alt="심장·호흡기 내과" class="service-img">
-                    <div class="service-info">
-                        <h2>심장·호흡기 내과</h2>
-                        <p>그린벨 동물의료센터 심장·호흡기 센터는 반려동물의 생명과 직결되는 순환기 및 호흡기 질환에 대해 대학병원급 정밀 진단과 전문적인 통합 관리 서비스를
-                            제공합니다.<br><br>
-                            단순한 증상 완화를 넘어, GE HealthCare의 고사양 심장 초음파(Vivid series)를 활용한 입체적인 판독과 디지털 흉부 방사선(DR) 분석을 통해
-                            판막 질환, 비대성 심근증(HCM), 심장사상충 및 만성 기관지염 등 복합적인 질환의 근본 원인을 정확히 규명합니다.<br><br>
-                            또한, 환자의 연령, 기저 질환, 생활 환경을 고려한 '맞춤형 심폐 관리 프로토콜'을 운영하여, 중증 응급 환자를 위한 24시간 집중 산소 처치와 체계적인 약물
-                            조절을 통해 반려동물이 더욱 건강하고 편안하게 호흡하며 보호자와 오랜 시간 함께할 수 있도록 최선을 다합니다.</p>
-                        <div class="equipment-gallery">
-                            <h4>관련 장비</h4>
-                            <div class="eq-list">
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS001.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS002.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS003.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS004.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS005.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS006.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS008.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS009.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS010.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS011.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS012.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS014.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS017.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS018.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS019.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS024.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS027.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS028.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS029.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS030.jpg"
-                                        alt="장비"></div>
-                            </div>
+        <footer class="footer-wrapper" style="background: #fff; border-top: 1px solid #ddd; padding: 60px 0;">
+                <div class="container">
+                        <div style="text-align: center; color: #777; font-size: 0.9rem; line-height: 1.8;">
+                                <p>사업자번호 : 210-38-94302 ｜ 대표자 : 성지세</p>
+                                <p>TEL : 043-882-7975 ｜ E-mail : greenbellequine@naver.com</p>
+                                <p style="margin-top: 10px; font-weight: 500;" class="copyright">COPYRIGHT © GREENBELL
+                                        ANIMAL MEDICAL
+                                        CENTER. ALL
+                                        RIGHTS RESERVED.</p>
                         </div>
-                    </div>
                 </div>
+        </footer>
 
-                <!-- 신장·비뇨기 -->
-                <div id="sect-2" class="service-card">
-                    <img src="images/nephrology_bg.png" alt="신장·비뇨기 내과" class="service-img">
-                    <div class="service-info">
-                        <h2>신장·비뇨기 내과</h2>
-                        <p>그린벨 신장·비뇨기 센터는 급·만성 신부전, 하부 요로 질환(FLUTD), 결석증 등 복합적인 비뇨기계 질환에 대해 정밀 혈액 분석 시스템과 SDMA 검사를 통한 조기
-                            진단 서비스를 제공합니다.<br><br>
-                            신장 손상의 정도를 다각도로 평가하여 개체별 맞춤 수액 처치와 식이 요법, 혈압 관리를 포함한 통합 신장 보존 프로그램을 운영하며, 특히 고양이 환자의 만성
-                            신질환(CKD) 관리에 특화된 전문 케어를 제공하여 삶의 질을 획기적으로 개선합니다.</p>
-                        <div class="equipment-gallery">
-                            <h4>관련 장비</h4>
-                            <div class="eq-list">
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS001.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS002.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS003.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS004.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS005.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS006.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS008.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS009.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS010.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS011.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS012.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS014.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS017.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS018.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS019.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS024.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS027.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS028.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS029.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS030.jpg"
-                                        alt="장비"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 소화기 -->
-                <div id="sect-3" class="service-card">
-                    <img src="images/gastroenterology_bg.png" alt="소화기 내과" class="service-img">
-                    <div class="service-info">
-                        <h2>소화기 내과</h2>
-                        <p>소화기 센터는 만성 구토, 설사, IBD(염증성 장질환), 췌장염 및 간·담도 질환에 대해 첨단 연성 내시경과 고해상도 복부 초음파를 활용한 차별화된 진단을
-                            시행합니다.<br><br>
-                            풍부한 임상 경험을 가진 의료진이 식이 알러지 분석과 마이크로바이옴 관리를 병행하여 근본적인 소화기 건강 회복을 돕고, 필요한 경우 복강경을 통한 최소 침습적 생검을
-                            통해 정확한 병리 진단을 도출합니다.</p>
-                        <div class="equipment-gallery">
-                            <h4>관련 장비</h4>
-                            <div class="eq-list">
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS001.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS002.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS003.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS004.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS005.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS006.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS008.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS009.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS010.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS011.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS012.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS014.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS017.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS018.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS019.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS024.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS027.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS028.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS029.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS030.jpg"
-                                        alt="장비"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 내분비 -->
-                <div id="sect-4" class="service-card">
-                    <img src="images/endocrinology_bg.png" alt="내분비 내과" class="service-img">
-                    <div class="service-info">
-                        <h2>내분비 내과</h2>
-                        <p>내분비 센터는 당뇨병, 쿠싱증후군(부신피질기능항진증), 갑상선 질환 등 평생 관리가 필요한 호르몬 질환에 대해 정밀 호르몬 농도 측정 및 자극 검사(ACTH 등)를
-                            통한 체계적인 모니터링을 진행합니다.<br><br>
-                            실시간 연속 혈당 측정기(CGMS) 도입과 개별 환자의 대사 특성을 고려한 인슐린 용량 최적화 프로그램을 통해 합병증 없이 안정적인 호르몬 균형을 유지할 수 있도록
-                            정교한 관리 전략을 수립합니다.</p>
-                        <div class="equipment-gallery">
-                            <h4>관련 장비</h4>
-                            <div class="eq-list">
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS001.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS002.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS003.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS004.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS005.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS006.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS008.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS009.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS010.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS011.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS012.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS014.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS017.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS018.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS019.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS024.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS027.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS028.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS029.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS030.jpg"
-                                        alt="장비"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 종양 -->
-                <div id="sect-5" class="service-card">
-                    <img src="images/oncology_bg.png" alt="종양 내과" class="service-img">
-                    <div class="service-info">
-                        <h2>종양 내과</h2>
-                        <p>종양 센터는 반려동물의 암 진단부터 항암 치료까지 환자의 삶의 질을 최우선으로 하는 맞춤형 항암 케어를 제공합니다. 미세바늘 흡인 검사(FNA)와 생검을 통한 병리
-                            판독, 전이 평가를 위한 정밀 영상 진단을 기반으로 최적의 병기를 결정합니다.<br><br>
-                            부작용을 최소화한 표준 항암 프로토콜은 물론, 표적 항암 치료와 통증 관리를 병행하여 환자가 고통 없이 가족 곁을 지킬 수 있도록 심리적 케어와 의료적 지원을
-                            통합적으로 제공합니다.</p>
-                        <div class="equipment-gallery">
-                            <h4>관련 장비</h4>
-                            <div class="eq-list">
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS001.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS002.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS003.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS004.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS005.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS006.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS008.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS009.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS010.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS011.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS012.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS014.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS017.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS018.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS019.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS024.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS027.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS028.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS029.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS030.jpg"
-                                        alt="장비"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 피부과 -->
-                <div id="sect-6" class="service-card">
-                    <img src="images/dermatology_bg.png" alt="피부과" class="service-img">
-                    <div class="service-info">
-                        <h2>피부과</h2>
-                        <p>피부 센터는 난치성 아토피, 알러지 질환, 만성 외이염 및 자가면역성 피부 질환에 대해 근본적인 원인 규명을 위한 면역 기능 평가와 알러지 검사를
-                            시행합니다.<br><br>
-                            단순 약물 처방을 넘어, 면역 치료(Desensitization)와 레이저 치료, 환자별 약용 샴푸 처방 등 다각적인 외용 처치를 병행하여 재발을 방지합니다. 특히
-                            피부 장벽 강화와 꾸준한 환경 관리를 통해 반려동물이 가려움 없는 건강한 일상을 되찾을 수 있도록 돕습니다.</p>
-                        <div class="equipment-gallery">
-                            <h4>관련 장비</h4>
-                            <div class="eq-list">
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS001.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS002.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS003.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS004.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS005.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS006.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS008.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS009.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS010.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS011.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS012.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS014.png"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS017.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS018.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS019.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS024.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS027.webp"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS028.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS029.jpg"
-                                        alt="장비"></div>
-                                <div class="eq-item" onclick="openModal(this)"><img src="images/장비사진/INS030.jpg"
-                                        alt="장비"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal for Equipment Images -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="close-modal">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
-
-    <script>
-        function openModal(element) {
-            const modal = document.getElementById("imageModal");
-            const modalImg = document.getElementById("modalImg");
-            const src = element.querySelector('img').src;
-            modal.style.display = "block";
-            modalImg.src = src;
-        }
-
-        function closeModal() {
-            document.getElementById("imageModal").style.display = "none";
-        }
-    </script>
-
-
-    <footer class="footer-wrapper" style="background: #fff; border-top: 1px solid #ddd; padding: 60px 0;">
-        <div class="container">
-            <div style="text-align: center; color: #777; font-size: 0.9rem; line-height: 1.8;">
-                <p>사업자번호 : 210-38-94302 ｜ 대표자 : 성지세</p>
-                <p>TEL : 043-882-7975 ｜ E-mail : greenbellequine@naver.com</p>
-                <p style="margin-top: 10px; font-weight: 500;" class="copyright">COPYRIGHT © GREENBELL ANIMAL MEDICAL
-                    CENTER. ALL
-                    RIGHTS RESERVED.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/menu.js"></script>
+        <script src="js/menu.js"></script>
 </body>
 
 </html>
