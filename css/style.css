@@ -678,9 +678,19 @@ body {
    오시는 길 지도 모바일 1열 처리
 ========================= */
 @media (max-width: 768px) {
-    #location-section>div>div {
+    .location-branch {
+        padding: 20px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .map-container {
+        height: 300px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .info-grid {
         grid-template-columns: 1fr !important;
-        gap: 60px;
+        gap: 10px !important;
     }
 }
 
