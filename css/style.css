@@ -683,21 +683,21 @@ body {
         margin-bottom: 40px !important;
     }
 
-    /* Google Maps is generally allowed in iframes, but we provide buttons for app convenience */
+    /* Google Maps is allowed in iframes, so we show it alongside buttons */
     .map-container iframe {
         display: block;
-        /* Show Google Maps iframe */
-        height: 300px !important;
+        height: 350px !important;
     }
 
     .map-container {
-        height: 300px !important;
+        height: 350px !important;
         margin-bottom: 20px !important;
     }
 
     .mobile-map-card {
-        display: none !important;
-        /* Hide fallback card if using iframe directly */
+        display: block !important;
+        order: 2;
+        /* Put buttons below the map for better flow */
     }
 
     .info-grid {
