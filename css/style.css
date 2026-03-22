@@ -798,6 +798,32 @@ body {
     padding: 100px 0;
 }
 
+/* 병원 둘러보기 그리드 스타일 */
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+@media (max-width: 992px) {
+    .tour-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .tour-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tour-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 /* Centers Grid */
 .centers-grid {
     display: grid;
