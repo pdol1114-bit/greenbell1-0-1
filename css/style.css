@@ -681,9 +681,11 @@ body {
     .location-branch {
         padding: 24px !important;
         margin-bottom: 40px !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
-    /* Google Maps is allowed in iframes, so we show it alongside buttons */
+    /* Google Maps is allowed in iframes, so we show it */
     .map-container iframe {
         display: block;
         height: 350px !important;
@@ -692,12 +694,14 @@ body {
     .map-container {
         height: 350px !important;
         margin-bottom: 20px !important;
+        order: 1;
+        /* Map on top */
     }
 
     .mobile-map-card {
         display: block !important;
         order: 2;
-        /* Put buttons below the map for better flow */
+        /* Buttons below map */
     }
 
     .info-grid {
