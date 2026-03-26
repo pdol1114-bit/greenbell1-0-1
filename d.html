@@ -234,22 +234,31 @@
 
         .diag-section-item ul li {
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            align-items: center;
+            gap: 12px;
             font-size: 0.97rem;
             color: #444;
             line-height: 1.5;
         }
 
         .diag-section-item ul li::before {
-            content: "";
-            display: inline-block;
-            width: 7px;
-            height: 7px;
-            min-width: 7px;
-            border-radius: 50%;
-            background: var(--secondary-color);
-            margin-top: 7px;
+            display: none;
+        }
+
+        .diag-li-icon {
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            background: #e8f5f0;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .diag-li-icon i {
+            font-size: 0.75rem;
+            color: #1a6b5a;
         }
 
         .diag-section-item .diag-note {
@@ -397,13 +406,13 @@
                         </div>
                         <p class="diag-subtitle">정밀한 수치 분석이 가능한 검사 장비</p>
                         <ul>
-                            <li>IDEXX ProCyte (혈구 분석)</li>
-                            <li>IDEXX Catalyst (혈청 화학 검사)</li>
-                            <li>IDEXX Sedivue (요침사 분석)</li>
-                            <li>IDEXX Urine Analyzer</li>
-                            <li>Vcheck 2400 (호르몬 검사)</li>
-                            <li>혈액 응고 검사 장비</li>
-                            <li>SNAP 검사 키트</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-droplet"></i></span>IDEXX ProCyte (혈구 분석)</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-flask"></i></span>IDEXX Catalyst (혈청 화학 검사)</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-vial"></i></span>IDEXX Sedivue (요침사 분석)</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-vial-circle-check"></i></span>IDEXX Urine Analyzer</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-syringe"></i></span>Vcheck 2400 (호르몬 검사)</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-heart-pulse"></i></span>혈액 응고 검사 장비</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-kit-medical"></i></span>SNAP 검사 키트</li>
                         </ul>
                         <p class="diag-note">기본 혈액검사부터 호르몬, 감염성 질환, 응고계 검사까지<br>병원 내에서 대부분 시행 가능합니다.</p>
                     </div>
@@ -419,9 +428,9 @@
                         </div>
                         <p class="diag-subtitle">눈으로 확인하는 정밀 진단</p>
                         <ul>
-                            <li>디지털 방사선 (X-ray)</li>
-                            <li>초음파 검사</li>
-                            <li>CT</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-x-ray"></i></span>디지털 방사선 (X-ray)</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-wave-square"></i></span>초음파 검사</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-circle-radiation"></i></span>CT</li>
                         </ul>
                         <p class="diag-note">내부 장기의 상태를 보다 정확하게 확인하고 진단할 수 있습니다.</p>
                     </div>
@@ -437,8 +446,8 @@
                         </div>
                         <p class="diag-subtitle">진단과 치료를 동시에 고려한 장비 구성</p>
                         <ul>
-                            <li>내시경</li>
-                            <li>C-arm</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-microscope"></i></span>내시경</li>
+                            <li><span class="diag-li-icon"><i class="fas fa-rotate"></i></span>C-arm</li>
                         </ul>
                         <p class="diag-note">진단뿐 아니라 수술 및 치료 과정에서도 활용됩니다.</p>
                     </div>
