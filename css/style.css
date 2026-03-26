@@ -1129,6 +1129,28 @@ body {
     display: block;
     cursor: pointer;
     flex-shrink: 0;
+    position: relative;
+}
+
+.service-photo-wrap::before,
+.service-photo-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.service-photo-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, #000 0%, transparent 100%);
+}
+
+.service-photo-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, #000 0%, transparent 100%);
 }
 
 .service-photo-wrap img {
