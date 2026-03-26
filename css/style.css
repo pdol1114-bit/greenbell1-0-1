@@ -1123,33 +1123,28 @@ body {
 
 /* 사진 wrapper - 이미지 overflow를 완전히 차단 */
 .service-photo-wrap {
-    width: 100%;
+    width: 100% !important;
+    height: auto !important; /* 고정 높이 해제하여 한 장씩 독립 */
+    margin-bottom: 30px !important; /* 사진 사이 간격 확보 */
+    background-color: transparent !important; /* 검은 배경 제거 */
+    display: block !important;
     overflow: hidden;
-    display: block;
-    cursor: pointer;
-    flex-shrink: 0;
-    position: relative;
 }
 
 .service-photo-wrap img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    object-position: center;
+    width: 100% !important;
+    height: 450px !important; /* 모든 사진 높이 통일 */
+    object-fit: cover !important; /* 비율 유지하며 꽉 채우기 */
+    border-radius: 12px;
     display: block;
-    transition: opacity 0.2s;
-}
-
-.service-photo-wrap:hover img {
-    opacity: 0.9;
 }
 
 @media (max-width: 768px) {
-    .service-photo-item {
-        height: 220px;
+    .service-photo-wrap img {
+        height: 250px !important;
     }
     .service-photo-wrap {
-        height: 220px;
+        margin-bottom: 20px !important;
     }
 }
 
