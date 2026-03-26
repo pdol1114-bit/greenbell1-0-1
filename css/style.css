@@ -1124,9 +1124,6 @@ body {
 /* 사진 wrapper - 이미지 overflow를 완전히 차단 */
 .service-photo-wrap {
     width: 100%;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: block;
     cursor: pointer;
