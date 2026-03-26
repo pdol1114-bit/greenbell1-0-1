@@ -86,9 +86,9 @@
                         </h1>
 
                         <div class="service-grid">
+
                                 <!-- 정형외과 -->
                                 <div id="sect-1" class="service-card">
-                                        <img src="images/각과 사진용/스크린샷/스크린샷 2026-01-06 오후 10.29.24.png" alt="정형외과" class="service-img">
                                         <div class="service-info">
                                                 <h2>정형외과</h2>
                                                 <p>그린벨동물의료센터 정형외과는 슬개골 탈구, 전십자인대 파열(TPLO/CTWO), 골절 등 보행에 영향을 주는 근골격계 질환을
@@ -96,45 +96,38 @@
                                                         수술 시 조직 손상을 최소화하는 장비와 C-arm을 활용하여 보다 정확한 수술을 시행합니다.<br>
                                                         수술 후에는 환자의 상태에 맞춘 관리와 통증 조절을 통해 안정적인 회복을 돕습니다.
                                                 </p>
-                                                <!-- 사진 영역 (1~2장) -->
-                                                <div class="section-photo-area">
-                                                        <div class="section-photo-slot"><img src="images/혁신도시점/스크린샷/스크린샷 2026-01-06 오후 10.28.53.png" alt="정형외과 1" onclick="openModal(this)"></div>
-                                                        <div class="section-photo-slot"><img src="images/혁신도시점/스크린샷/스크린샷 2026-01-06 오후 10.29.02.png" alt="정형외과 2" onclick="openModal(this)"></div>
-                                                </div>
                                         </div>
+                                        <img src="images/각과 사진용/스크린샷/스크린샷 2026-01-06 오후 10.29.24.png" alt="정형외과" class="service-photo-item" onclick="openModal(this)">
+                                        <img src="images/혁신도시점/스크린샷/스크린샷 2026-01-06 오후 10.28.53.png" alt="정형외과 2" class="service-photo-item" onclick="openModal(this)">
+                                        <img src="images/혁신도시점/스크린샷/스크린샷 2026-01-06 오후 10.29.02.png" alt="정형외과 3" class="service-photo-item" onclick="openModal(this)">
                                 </div>
 
                                 <!-- 치과 -->
                                 <div id="sect-2" class="service-card">
-                                        <img src="images/각과 사진용/스크린샷/스크린샷 2026-01-06 오후 10.28.35.png" alt="치과" class="service-img">
                                         <div class="service-info">
                                                 <h2>치과</h2>
                                                 <p>치과 센터는 단순 스케일링을 넘어 구강 질환의 원인을 정확히 진단하고 치료합니다.<br>
                                                         구강 X-ray 와 치과 장비를 통해 보이지 않는 치근 질환까지 확인하며, 구내염, 발치, 구강 종양 등 다양한
-                                                        치과 질환에 대해 환자의 상태에 맞는 치료를 시행합니다.</p>
-                                                <!-- 사진 영역 (1~2장) -->
-                                                <div class="section-photo-area">
-                                                        <div class="section-photo-slot"><img src="images/K_002.jpeg" alt="치과 1" onclick="openModal(this)"></div>
-                                                        <div class="section-photo-slot"><img src="images/tour_0319/tour_08.jpg" alt="치과 2" onclick="openModal(this)"></div>
-                                                </div>
+                                                        치과 질환에 대해 환자의 상태에 맞는 치료를 시행합니다.
+                                                </p>
                                         </div>
+                                        <img src="images/각과 사진용/스크린샷/스크린샷 2026-01-06 오후 10.28.35.png" alt="치과" class="service-photo-item" onclick="openModal(this)">
+                                        <img src="images/K_002.jpeg" alt="치과 2" class="service-photo-item" onclick="openModal(this)">
+                                        <img src="images/tour_0319/tour_08.jpg" alt="치과 3" class="service-photo-item" onclick="openModal(this)">
                                 </div>
 
                                 <!-- 일반·종양외과 -->
                                 <div id="sect-3" class="service-card">
-                                        <img src="images/각과 사진용/스크린샷/스크린샷 2026-01-06 오후 10.27.56.png" alt="일반·종양외과" class="service-img">
                                         <div class="service-info">
                                                 <h2>일반·종양외과</h2>
                                                 <p>일반·종양외과에서는 중성화 수술부터 종양 제거, PSS, 횡격막 탈장 등 다양한 연부조직 수술을 시행합니다.<br>
                                                         마취 모니터링과 수술 장비를 통해 안정적인 수술 환경을 유지하며, 종양 환자의 경우 내과와의 협진을 통해 수술 전후
-                                                        치료까지 함께 계획합니다.</p>
-                                                <!-- 사진 영역 (1~2장) -->
-                                                <div class="section-photo-area">
-                                                        <div class="section-photo-slot"></div>
-                                                        <div class="section-photo-slot"></div>
-                                                </div>
+                                                        치료까지 함께 계획합니다.
+                                                </p>
                                         </div>
+                                        <img src="images/각과 사진용/스크린샷/스크린샷 2026-01-06 오후 10.27.56.png" alt="일반·종양외과" class="service-photo-item" onclick="openModal(this)">
                                 </div>
+
                         </div>
 
                         <!-- 외과 관련 장비 섹션 -->
@@ -231,7 +224,10 @@
                 function openModal(element) {
                         const modal = document.getElementById("imageModal");
                         const modalImg = document.getElementById("modalImg");
-                        const src = element.querySelector('img').src;
+                        // img 태그 자체이면 src 직접, 아니면 내부 img 탐색
+                        const src = element.tagName === 'IMG'
+                                ? element.src
+                                : element.querySelector('img').src;
                         modal.style.display = "block";
                         modalImg.src = src;
                 }
