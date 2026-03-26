@@ -156,34 +156,48 @@
             opacity: 0.9;
         }
 
-        /* Card Grid for diagnostic sections */
-        .diag-card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 28px;
+        /* Diagnostic sections - vertical stack with image top, text bottom */
+        .diag-section-list {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
             margin-bottom: 80px;
         }
 
-        .diag-card {
+        .diag-section-item {
             background: #fff;
             border-radius: 20px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.07);
             border: 1px solid #f0f0f0;
-            padding: 36px 32px;
+            overflow: hidden;
+        }
+
+        .diag-section-item img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .diag-section-body {
+            padding: 48px 52px;
             display: flex;
             flex-direction: column;
             gap: 16px;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .diag-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 14px 40px rgba(0,0,0,0.11);
+        .diag-section-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 4px;
         }
 
         .diag-card-icon {
             width: 52px;
             height: 52px;
+            min-width: 52px;
             background: linear-gradient(135deg, var(--primary-color), #1a6b5a);
             border-radius: 14px;
             display: flex;
@@ -196,59 +210,65 @@
             color: #fff;
         }
 
-        .diag-card h3 {
-            font-size: 1.25rem;
+        .diag-section-item h3 {
+            font-size: 1.5rem;
             color: var(--primary-color);
             font-weight: 700;
             margin: 0;
         }
 
-        .diag-card .diag-subtitle {
-            font-size: 0.9rem;
+        .diag-section-item .diag-subtitle {
+            font-size: 0.95rem;
             color: #888;
             margin: 0;
         }
 
-        .diag-card ul {
+        .diag-section-item ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 10px 24px;
         }
 
-        .diag-card ul li {
+        .diag-section-item ul li {
             display: flex;
             align-items: flex-start;
-            gap: 8px;
-            font-size: 0.95rem;
+            gap: 10px;
+            font-size: 0.97rem;
             color: #444;
             line-height: 1.5;
         }
 
-        .diag-card ul li::before {
+        .diag-section-item ul li::before {
             content: "";
             display: inline-block;
-            width: 6px;
-            height: 6px;
-            min-width: 6px;
+            width: 7px;
+            height: 7px;
+            min-width: 7px;
             border-radius: 50%;
             background: var(--secondary-color);
             margin-top: 7px;
         }
 
-        .diag-card .diag-note {
-            font-size: 0.9rem;
+        .diag-section-item .diag-note {
+            font-size: 0.92rem;
             color: #666;
-            line-height: 1.7;
+            line-height: 1.8;
             border-top: 1px solid #eee;
-            padding-top: 14px;
+            padding-top: 16px;
             margin: 0;
         }
 
         @media (max-width: 768px) {
-            .diag-card-grid {
+            .diag-section-item img {
+                height: 220px;
+            }
+            .diag-section-body {
+                padding: 30px 24px;
+            }
+            .diag-section-item ul {
                 grid-template-columns: 1fr;
             }
         }
@@ -365,48 +385,63 @@
             </div>
 
             <!-- 1. 혈액 및 기본 검사 시스템 / 2. 영상 진단 시스템 / 3. 특수 진단 및 수술 연계 장비 -->
-            <div class="diag-card-grid">
+            <div class="diag-section-list">
 
                 <!-- 1. 혈액 및 기본 검사 시스템 -->
-                <div id="sect-1" class="diag-card">
-                    <div class="diag-card-icon"><i class="fas fa-vial"></i></div>
-                    <h3>혈액 및 기본 검사 시스템</h3>
-                    <p class="diag-subtitle">정밀한 수치 분석이 가능한 검사 장비</p>
-                    <ul>
-                        <li>IDEXX ProCyte (혈구 분석)</li>
-                        <li>IDEXX Catalyst (혈청 화학 검사)</li>
-                        <li>IDEXX Sedivue (요침사 분석)</li>
-                        <li>IDEXX Urine Analyzer</li>
-                        <li>Vcheck 2400 (호르몬 검사)</li>
-                        <li>혈액 응고 검사 장비</li>
-                        <li>SNAP 검사 키트</li>
-                    </ul>
-                    <p class="diag-note">기본 혈액검사부터 호르몬, 감염성 질환, 응고계 검사까지<br>병원 내에서 대부분 시행 가능합니다.</p>
+                <div id="sect-1" class="diag-section-item">
+                    <img src="images/tour_0319/tour_12.jpg" alt="혈액 및 기본 검사 시스템">
+                    <div class="diag-section-body">
+                        <div class="diag-section-header">
+                            <div class="diag-card-icon"><i class="fas fa-vial"></i></div>
+                            <h3>혈액 및 기본 검사 시스템</h3>
+                        </div>
+                        <p class="diag-subtitle">정밀한 수치 분석이 가능한 검사 장비</p>
+                        <ul>
+                            <li>IDEXX ProCyte (혈구 분석)</li>
+                            <li>IDEXX Catalyst (혈청 화학 검사)</li>
+                            <li>IDEXX Sedivue (요침사 분석)</li>
+                            <li>IDEXX Urine Analyzer</li>
+                            <li>Vcheck 2400 (호르몬 검사)</li>
+                            <li>혈액 응고 검사 장비</li>
+                            <li>SNAP 검사 키트</li>
+                        </ul>
+                        <p class="diag-note">기본 혈액검사부터 호르몬, 감염성 질환, 응고계 검사까지<br>병원 내에서 대부분 시행 가능합니다.</p>
+                    </div>
                 </div>
 
                 <!-- 2. 영상 진단 시스템 -->
-                <div id="sect-2" class="diag-card">
-                    <div class="diag-card-icon"><i class="fas fa-x-ray"></i></div>
-                    <h3>영상 진단 시스템</h3>
-                    <p class="diag-subtitle">눈으로 확인하는 정밀 진단</p>
-                    <ul>
-                        <li>디지털 방사선 (X-ray)</li>
-                        <li>초음파 검사</li>
-                        <li>CT</li>
-                    </ul>
-                    <p class="diag-note">내부 장기의 상태를 보다 정확하게 확인하고 진단할 수 있습니다.</p>
+                <div id="sect-2" class="diag-section-item">
+                    <img src="images/혁신도시점/스크린샷/스크린샷 2026-01-06 오후 10.24.24.png" alt="영상 진단 시스템">
+                    <div class="diag-section-body">
+                        <div class="diag-section-header">
+                            <div class="diag-card-icon"><i class="fas fa-x-ray"></i></div>
+                            <h3>영상 진단 시스템</h3>
+                        </div>
+                        <p class="diag-subtitle">눈으로 확인하는 정밀 진단</p>
+                        <ul>
+                            <li>디지털 방사선 (X-ray)</li>
+                            <li>초음파 검사</li>
+                            <li>CT</li>
+                        </ul>
+                        <p class="diag-note">내부 장기의 상태를 보다 정확하게 확인하고 진단할 수 있습니다.</p>
+                    </div>
                 </div>
 
                 <!-- 3. 특수 진단 및 수술 연계 장비 -->
-                <div id="sect-3" class="diag-card">
-                    <div class="diag-card-icon"><i class="fas fa-microscope"></i></div>
-                    <h3>특수 진단 및 수술 연계 장비</h3>
-                    <p class="diag-subtitle">진단과 치료를 동시에 고려한 장비 구성</p>
-                    <ul>
-                        <li>내시경</li>
-                        <li>C-arm</li>
-                    </ul>
-                    <p class="diag-note">진단뿐 아니라 수술 및 치료 과정에서도 활용됩니다.</p>
+                <div id="sect-3" class="diag-section-item">
+                    <img src="images/tour_0319/tour_10.jpg" alt="특수 진단 및 수술 연계 장비">
+                    <div class="diag-section-body">
+                        <div class="diag-section-header">
+                            <div class="diag-card-icon"><i class="fas fa-microscope"></i></div>
+                            <h3>특수 진단 및 수술 연계 장비</h3>
+                        </div>
+                        <p class="diag-subtitle">진단과 치료를 동시에 고려한 장비 구성</p>
+                        <ul>
+                            <li>내시경</li>
+                            <li>C-arm</li>
+                        </ul>
+                        <p class="diag-note">진단뿐 아니라 수술 및 치료 과정에서도 활용됩니다.</p>
+                    </div>
                 </div>
 
             </div>
