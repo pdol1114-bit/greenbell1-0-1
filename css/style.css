@@ -1100,8 +1100,10 @@ body {
 
 .service-img {
     width: 100%;
-    height: auto;
-    object-fit: unset;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .service-info {
@@ -1230,6 +1232,14 @@ body {
 @media (max-width: 768px) {
     .service-img {
         height: 200px;
+    }
+
+    .section-photo-slot {
+        height: 160px;
+    }
+
+    .section-photo-area {
+        gap: 10px;
     }
 
     .eq-item {
