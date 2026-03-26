@@ -156,6 +156,103 @@
             opacity: 0.9;
         }
 
+        /* Card Grid for diagnostic sections */
+        .diag-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-bottom: 80px;
+        }
+
+        .diag-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+            border: 1px solid #f0f0f0;
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .diag-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 40px rgba(0,0,0,0.11);
+        }
+
+        .diag-card-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--primary-color), #1a6b5a);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .diag-card-icon i {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .diag-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .diag-card .diag-subtitle {
+            font-size: 0.9rem;
+            color: #888;
+            margin: 0;
+        }
+
+        .diag-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .diag-card ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .diag-card ul li::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            min-width: 6px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            margin-top: 7px;
+        }
+
+        .diag-card .diag-note {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+            border-top: 1px solid #eee;
+            padding-top: 14px;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .diag-card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .closing-text {
             text-align: center;
             padding: 40px 20px;
@@ -257,19 +354,61 @@
 
             <!-- Intro -->
             <div class="checkup-hero">
-                <h2 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 30px;">정확한 진단은 치료의 시작이며, 예방의
-                    출발점입니다</h2>
+                <h2 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 30px;">정확한 진단은 치료의 시작이며, 예방의 출발점입니다</h2>
                 <p>
-                    그린벨동물의료센터는
-                    증상이 나타난 이후의 치료뿐만 아니라,
-                    질병을 조기에 발견하고 예방하는 과정 또한 중요하게 생각합니다.<br><br>
-                    혈액검사, 영상검사 등 다양한 데이터를 종합하여
-                    환자의 현재 상태를 정확하게 파악하고,
-                    질병의 진행을 미리 예측하고 관리할 수 있도록 합니다.<br><br>
-                    말로 표현하지 못하는 동물의 상태를
-                    조금 더 일찍, 정확하게 이해하기 위해
-                    정밀한 진단 과정을 중요하게 생각합니다.
+                    그린벨동물의료센터는 증상이 나타난 이후의 치료뿐만 아니라, <br>질병을 조기에 발견하고 예방하는 과정 또한 중요하게 생각합니다.
+                    <br><br>
+                    혈액검사, 영상검사 등 다양한 데이터를 종합하여 환자의 현재 상태를 정확하게 파악하고,<br>질병의 진행을 미리 예측하고 관리할 수 있도록 합니다.
+                    <br><br>
+                    말로 표현하지 못하는 동물의 상태를 조금 더 일찍, <br>정확하게 이해하기 위해 정밀한 진단 과정을 중요하게 생각합니다.
                 </p>
+            </div>
+
+            <!-- 1. 혈액 및 기본 검사 시스템 / 2. 영상 진단 시스템 / 3. 특수 진단 및 수술 연계 장비 -->
+            <div class="diag-card-grid">
+
+                <!-- 1. 혈액 및 기본 검사 시스템 -->
+                <div id="sect-1" class="diag-card">
+                    <div class="diag-card-icon"><i class="fas fa-vial"></i></div>
+                    <h3>혈액 및 기본 검사 시스템</h3>
+                    <p class="diag-subtitle">정밀한 수치 분석이 가능한 검사 장비</p>
+                    <ul>
+                        <li>IDEXX ProCyte (혈구 분석)</li>
+                        <li>IDEXX Catalyst (혈청 화학 검사)</li>
+                        <li>IDEXX Sedivue (요침사 분석)</li>
+                        <li>IDEXX Urine Analyzer</li>
+                        <li>Vcheck 2400 (호르몬 검사)</li>
+                        <li>혈액 응고 검사 장비</li>
+                        <li>SNAP 검사 키트</li>
+                    </ul>
+                    <p class="diag-note">기본 혈액검사부터 호르몬, 감염성 질환, 응고계 검사까지<br>병원 내에서 대부분 시행 가능합니다.</p>
+                </div>
+
+                <!-- 2. 영상 진단 시스템 -->
+                <div id="sect-2" class="diag-card">
+                    <div class="diag-card-icon"><i class="fas fa-x-ray"></i></div>
+                    <h3>영상 진단 시스템</h3>
+                    <p class="diag-subtitle">눈으로 확인하는 정밀 진단</p>
+                    <ul>
+                        <li>디지털 방사선 (X-ray)</li>
+                        <li>초음파 검사</li>
+                        <li>CT</li>
+                    </ul>
+                    <p class="diag-note">내부 장기의 상태를 보다 정확하게 확인하고 진단할 수 있습니다.</p>
+                </div>
+
+                <!-- 3. 특수 진단 및 수술 연계 장비 -->
+                <div id="sect-3" class="diag-card">
+                    <div class="diag-card-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>특수 진단 및 수술 연계 장비</h3>
+                    <p class="diag-subtitle">진단과 치료를 동시에 고려한 장비 구성</p>
+                    <ul>
+                        <li>내시경</li>
+                        <li>C-arm</li>
+                    </ul>
+                    <p class="diag-note">진단뿐 아니라 수술 및 치료 과정에서도 활용됩니다.</p>
+                </div>
+
             </div>
 
             <!-- Features of Health Checkup -->
@@ -294,67 +433,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- 1. 혈액 및 기본 검사 시스템 -->
-            <div id="sect-1" class="exam-section">
-                <div class="exam-section-body">
-                    <h2>혈액 및 기본 검사 시스템</h2>
-                    <p class="subtitle">정밀한 수치 분석이 가능한 검사 장비</p>
-                    <ul class="exam-items">
-                        <li class="exam-item">
-                            <ul>
-                                <li>IDEXX ProCyte (혈구 분석)</li>
-                                <li>IDEXX Catalyst (혈청 화학 검사)</li>
-                                <li>IDEXX Sedivue (요침사 분석)</li>
-                                <li>IDEXX Urine Analyzer</li>
-                                <li>Vcheck 2400 (호르몬 검사)</li>
-                                <li>혈액 응고 검사 장비</li>
-                                <li>SNAP 검사 키트</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p style="margin-top:20px; color:#555; line-height:1.8;">기본 혈액검사부터 호르몬, 감염성 질환, 응고계 검사까지<br>병원 내에서
-                        대부분 시행 가능합니다.</p>
-                </div>
-            </div>
-            <!-- 2. 영상 진단 시스템 -->
-            <div id="sect-2" class="exam-section">
-                <div class="exam-section-body">
-                    <h2>영상 진단 시스템</h2>
-                    <p class="subtitle">눈으로 확인하는 정밀 진단</p>
-                    <ul class="exam-items" style="grid-template-columns: 1fr;">
-                        <li class="exam-item">
-                            <ul>
-                                <li>디지털 방사선 (X-ray)</li>
-                                <li>초음파 검사</li>
-                                <li>CT</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p style="margin-top:20px; color:#555; line-height:1.8;">내부 장기의 상태를 보다 정확하게 확인하고 진단할 수 있습니다.</p>
-                </div>
-            </div>
-
-            <!-- 3. 특수 진단 및 수술 연계 장비 -->
-            <div id="sect-3" class="exam-section">
-                <div class="exam-section-body">
-                    <h2>특수 진단 및 수술 연계 장비</h2>
-                    <p class="subtitle">진단과 치료를 동시에 고려한 장비 구성</p>
-                    <ul class="exam-items">
-                        <li class="exam-item">
-                            <ul>
-                                <li>내시경</li>
-                                <li>C-arm</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p style="margin-top:20px; color:#555; line-height:1.8;">진단뿐 아니라 수술 및 치료 과정에서도 활용됩니다.</p>
-                </div>
-            </div>
-
-
-
-
 
             <!-- Closing -->
             <div class="closing-text" style="font-weight: 600; color: var(--primary-color);">
