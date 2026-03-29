@@ -1439,6 +1439,11 @@ body {
     display: block;
 }
 
+.service-photo-card.full-view img {
+    height: auto;
+    object-fit: contain;
+}
+
 @media (max-width: 768px) {
     .service-photo-grid {
         grid-template-columns: 1fr;
