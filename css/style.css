@@ -327,7 +327,8 @@ body {
         top: 0;
         left: 0;
         height: 100vh;
-        width: 45vw;
+        width: 70vw; /* 변경: 45vw -> 넓게 확장 */
+        max-width: 320px; /* 너무 넓어지는 것 방지 */
         padding: calc(80px + env(safe-area-inset-top, 0px)) 12px 24px;
         background: rgba(0, 0, 0, 0.95);
         transform: translateX(-100%);

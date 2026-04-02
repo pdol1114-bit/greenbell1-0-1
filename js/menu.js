@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // A. 서브메뉴가 있는 메인 항목 클릭 시
             if (hasSub) {
+                e.preventDefault(); // 메인메뉴 터치시 페이지 이동 방지
+                
                 const isOpen = parentLi.classList.contains('open');
 
                 // 다른 서브메뉴 닫기
@@ -55,20 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     parentLi.classList.add('open');
                 } else {
                     parentLi.classList.remove('open');
-                }
-
-                // 만약 href가 현재 페이지의 앵커인 경우 (예: a.html#sect-1)
-                const isAnchorToCurrent = href && (href.startsWith('#') || (href.includes('#') && currentPath.endsWith(href.split('#')[0])));
-
-                if (isAnchorToCurrent) {
-                    // 동일 페이지 내 이동이므로 메뉴를 닫음 (약간의 지연 후)
-                    setTimeout(() => {
-                        introMenu.classList.remove('open');
-                        if (greeting) greeting.classList.remove('hide');
-                    }, 100);
-                } else if (href === '#' || href.startsWith('#')) {
-                    e.preventDefault();
-                    e.stopPropagation();
                 }
             }
             // B. 서브메뉴가 없는 일반 링크 또는 서브메뉴 내부 링크 클릭 시
