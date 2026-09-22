@@ -635,15 +635,29 @@
 
   <!-- 공지 팝업 -->
   <div id="popup-overlay" class="popup-overlay">
-    <div class="popup-container">
-      <button class="popup-close" id="popup-close" aria-label="닫기">&times;</button>
-      <img src="images/popup_notice.png" alt="그린벨동물의료센터 수술 1만건 달성 기념 이벤트" class="popup-image">
-      <div class="popup-footer">
-        <label class="popup-today-label">
-          <input type="checkbox" id="popup-today-check">
-          <span>오늘 하루 안 보기</span>
-        </label>
-        <button class="popup-close-btn" id="popup-close-btn">닫기</button>
+    <div class="popup-group">
+      <div class="popup-container" id="popup-1">
+        <button class="popup-close" id="popup-close" aria-label="닫기">&times;</button>
+        <img src="images/popup_notice.png" alt="그린벨동물의료센터 수술 1만건 달성 기념 이벤트" class="popup-image">
+        <div class="popup-footer">
+          <label class="popup-today-label">
+            <input type="checkbox" id="popup-today-check">
+            <span>오늘 하루 안 보기</span>
+          </label>
+          <button class="popup-close-btn" id="popup-close-btn">닫기</button>
+        </div>
+      </div>
+
+      <div class="popup-container" id="popup-2">
+        <button class="popup-close" id="popup-close-2" aria-label="닫기">&times;</button>
+        <img src="images/광견병무료접종.jpg" alt="그린벨 광견병 예방접종 캠페인 - 10월 한달 광견병 무료 접종" class="popup-image">
+        <div class="popup-footer">
+          <label class="popup-today-label">
+            <input type="checkbox" id="popup-today-check-2">
+            <span>오늘 하루 안 보기</span>
+          </label>
+          <button class="popup-close-btn" id="popup-close-btn-2">닫기</button>
+        </div>
       </div>
     </div>
   </div>
@@ -666,6 +680,23 @@
       display: flex;
     }
 
+    .popup-group {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 20px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    @media (max-width: 700px) {
+      .popup-group {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
     .popup-container {
       position: relative;
       max-width: 500px;
@@ -675,6 +706,10 @@
       overflow: hidden;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
       animation: popupFadeIn 0.3s ease;
+    }
+
+    .popup-container[hidden] {
+      display: none;
     }
 
     @keyframes popupFadeIn {
@@ -760,35 +795,62 @@
 
   <script>
     (function () {
-      var STORAGE_KEY = 'popup_notice_10k_event_hidden';
       var overlay = document.getElementById('popup-overlay');
-      var closeX = document.getElementById('popup-close');
-      var closeBtn = document.getElementById('popup-close-btn');
-      var todayCheck = document.getElementById('popup-today-check');
 
-      function hidePopup() {
-        if (todayCheck.checked) {
-          var now = new Date();
-          var endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59).getTime();
-          localStorage.setItem(STORAGE_KEY, endOfDay);
+      var popups = [
+        {
+          storageKey: 'popup_notice_10k_event_hidden',
+          container: document.getElementById('popup-1'),
+          closeX: document.getElementById('popup-close'),
+          closeBtn: document.getElementById('popup-close-btn'),
+          todayCheck: document.getElementById('popup-today-check')
+        },
+        {
+          storageKey: 'popup_notice_2_hidden',
+          container: document.getElementById('popup-2'),
+          closeX: document.getElementById('popup-close-2'),
+          closeBtn: document.getElementById('popup-close-btn-2'),
+          todayCheck: document.getElementById('popup-today-check-2')
         }
-        overlay.classList.remove('active');
-      }
+      ];
 
-      function shouldShow() {
-        var hidden = localStorage.getItem(STORAGE_KEY);
+      function shouldShow(storageKey) {
+        var hidden = localStorage.getItem(storageKey);
         if (!hidden) return true;
         return new Date().getTime() > parseInt(hidden);
       }
 
-      if (shouldShow()) {
-        overlay.classList.add('active');
+      function updateOverlayVisibility() {
+        var anyVisible = popups.some(function (p) {
+          return !p.container.hidden;
+        });
+        overlay.classList.toggle('active', anyVisible);
       }
 
-      closeX.addEventListener('click', hidePopup);
-      closeBtn.addEventListener('click', hidePopup);
+      function hidePopup(p) {
+        if (p.todayCheck.checked) {
+          var now = new Date();
+          var endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59).getTime();
+          localStorage.setItem(p.storageKey, endOfDay);
+        }
+        p.container.hidden = true;
+        updateOverlayVisibility();
+      }
+
+      popups.forEach(function (p) {
+        if (!shouldShow(p.storageKey)) {
+          p.container.hidden = true;
+        }
+        p.closeX.addEventListener('click', function () { hidePopup(p); });
+        p.closeBtn.addEventListener('click', function () { hidePopup(p); });
+      });
+
+      updateOverlayVisibility();
+
       overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) hidePopup();
+        if (e.target === overlay) {
+          popups.forEach(hidePopup);
+        }
       });
     })();
   </script>
